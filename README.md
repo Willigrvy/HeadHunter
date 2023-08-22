@@ -14,6 +14,8 @@ TO BE ADDED LATER.
 
 ## Sources
 * Dependency packages: https://www.npmjs.com 
+* Mad scientist image - https://pixabay.com
+* Clown, funny people, crazy man, dog images - https://unsplash.com
 * RICE UNIVERSITY BOOT CAMP Activities for ORM and MVC.
 
 ## Usage
