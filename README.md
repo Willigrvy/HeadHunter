@@ -16,6 +16,7 @@ TO BE ADDED LATER.
 * Dependency packages: https://www.npmjs.com 
 * Mad scientist image - https://pixabay.com
 * Clown, funny people, crazy man, dog images - https://unsplash.com
+* Funny names - https://ethanwiner.com/funnames.html 
 * RICE UNIVERSITY BOOT CAMP Activities for ORM and MVC.
 
 ## Usage

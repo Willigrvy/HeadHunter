@@ -1,0 +1,30 @@
+<body>
+    <nav>
+        <h1><span class="span-1">Web</span> <span class="span-2">Hunters</span></h1>
+        <div class="nav">
+            <a href="./layouts/main.handlebars">Home</a>
+            <a href="./layouts/headhunter.handlebars">Headhunters</a>
+            <a href="./layouts/dashboard.handlebars">Candidates</a>
+            <a href="./layouts/resume.handlebars">Resume</a>
+        </div>
+    </nav>
+    <main>
+
+    </main>
+    <footer class="group-name">
+        <h3>The Witty Webbers</h3>
+    </footer>
+</body>
+
+
+<nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+</nav>
+{{#if loggedIn}}
+<script scr="/js/logout.js"></script>
+{{/if}}
