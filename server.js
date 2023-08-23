@@ -20,32 +20,32 @@ const PORT = process.env.PORT || 3001;
 //allows the helpers.js to ineteract with hadlebars
 const hbs = exphbs.create({ helpers });
 
-// //create seesion
-// const sess = {
-//     secret: 'Super secret secret',
-//     cookie: {
-//         // milliseconds * seconds * minutes * hours == 1000 * 60 * 60 * 24
-//         //expires in 1 day
-//         maxAge: 1000 * 60 * 60 * 24,
-//         // store session cookieswhen connected to http server
-//         httpOnly: true,
-//         //must exucute protcal in https
-//         secure: false,
-//         //must be from the same domain
-//         sameSite: 'strict',
-//     },
-//     // prevenst session being saved back into session store
-//     resave: false,
-//     // save a session when it is new
-//     saveUninitialized: true,
-//     // Sets up session store with sequelize
-//     store: new SequelizeStore({
-//         db: sequelize,
-//     }),
-// };
+//create seesion
+const sess = {
+    secret: 'Super secret secret',
+    cookie: {
+        // milliseconds * seconds * minutes * hours == 1000 * 60 * 60 * 24
+        //expires in 1 day
+        maxAge: 1000 * 60 * 60 * 24,
+        // store session cookieswhen connected to http server
+        httpOnly: true,
+        //must exucute protcal in https
+        secure: false,
+        //must be from the same domain
+        sameSite: 'strict',
+    },
+    // prevenst session being saved back into session store
+    resave: false,
+    // save a session when it is new
+    saveUninitialized: true,
+    // Sets up session store with sequelize
+    store: new SequelizeStore({
+        db: sequelize,
+    }),
+};
 
-// // init app session
-// app.use(session(sess));
+// init app session
+app.use(session(sess));
 
 // Inform Express.js on which template engine to use
 app.engine('handlebars', hbs.engine);
@@ -59,7 +59,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 // sync with database first then listen
-//sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on port ${PORT}`));
-//});
+});
   

@@ -2,7 +2,7 @@
   "name": "headhunter",
   "version": "1.0.0",
   "description": "* For this project, the Witty Webbers group will build a full stack web app for a fictionalized recruiting site named - Web Hunters. \r * The Witty Webbers will make sure that all code follows industry standards and is sourced correctly.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
