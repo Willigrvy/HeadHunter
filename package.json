@@ -1,0 +1,30 @@
+{
+  "name": "headhunter",
+  "version": "1.0.0",
+  "description": "* For this project, the Witty Webbers group will build a full stack web app for a fictionalized recruiting site named - Web Hunters. \r * The Witty Webbers will make sure that all code follows industry standards and is sourced correctly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Willigrvy/HeadHunter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Willigrvy/HeadHunter/issues"
+  },
+  "homepage": "https://github.com/Willigrvy/HeadHunter#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-session-sequelize": "^7.1.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.1.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^3.6.0",
+    "sequelize": "^6.32.1"
+  }
+}
