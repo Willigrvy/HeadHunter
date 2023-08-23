@@ -17,7 +17,7 @@ As Headhunters, We have seen that it is very difficult to sift through the many 
 * Mad scientist image - https://pixabay.com
 * Clown, funny people, crazy man, dog images - https://unsplash.com
 * Funny names - https://ethanwiner.com/funnames.html 
-* logo maker - https://www.picmonkey.com
+* logo and ward maker - https://www.picmonkey.com
 * color wheel - https://www.canva.com/colors/color-wheel/
 * site design idea - https://designshack.net/articles/trends/best-website-color-schemes/
 * html forms - Head First HTML and CSS 2nd Edition
