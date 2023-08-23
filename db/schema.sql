@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS headhunt_db;
+
+CREATE DATABASE headhunt_db;
