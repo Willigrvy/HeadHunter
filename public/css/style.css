@@ -8,12 +8,12 @@
 }
 
 :root {
-    --backgroundColor: hsl(0, 13%, 92%);
-    --navigationText: hsl(24, 60%, 23%);
-    --titleColor: hsl(0, 0%, 0%);
-    --footerColor: hsl(24, 60%, 23%);
-    --otherTextColor: hsl(24, 60%, 23%);
-    --buttonColor: grey;
+    --backgroundColor: ;
+    --navigationText: ;
+    --titleColor: ;
+    --footerColor: ;
+    --otherTextColor: ;
+    --buttonColor: hsl(26, 73%, 57%);
     --boxShadow: grey;
 }
 
