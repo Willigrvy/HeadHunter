@@ -10,7 +10,7 @@
 As a head hunter, I am able to log in to a site to see all potential candidates for the site and when i click on a profile, I can see their resume.
 
 ## Acceptance Criteria
-TO BE ADDED LATER.
+As Headhunters, We have seen that it is very difficult to sift through the many talented candidates that apply to jobs these days. Because we dont have the time to sift through the massive list of candidates; we have opted to create an app that will filter out candidates based on employer preferences. Our goal is to have a responsive site with a polished UI that will allow us to securely log in. From there, we need to be able to filter through a database of candidate resumes and view their created page when they are selected.
 
 ## Sources
 * Dependency packages: https://www.npmjs.com 
