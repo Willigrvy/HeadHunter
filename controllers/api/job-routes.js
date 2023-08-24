@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Resume } = require('../../Model');
+const { Job } = require('../../Model');
 
 //create resume
 router.post('/', async (req, res) => {
     try {
-        const resumeData = await Resume.create(req.body);
+        const jobData = await Job.create(req.body);
 
-        res.status(200).json(resumeData);
+        res.status(200).json(jobData);
        
     } catch (err) {
         console.log(err);
