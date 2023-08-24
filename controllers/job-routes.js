@@ -4,7 +4,7 @@ const { Headhunter, Candidate, Resume, Job } = require('../Model');
 const withAuth = require('../utils/auth');
 const router = require('express').Router();
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         //get all jobs
         const jobData = await Job.findAll();
@@ -21,7 +21,7 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-router.get('/job/:id', withAuth, async (req, res) => {
+router.get('/job/:id', async (req, res) => {
     try {
         //get job
         const jobData = await Job.findByPk(req.params.id);

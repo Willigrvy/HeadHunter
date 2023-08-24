@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { candidates } = require('../../Model');
+const { Candidate } = require('../../Model');
 
 // create candidate data for sign up
 router.post('/', async (req, res) => {
     try {
-      const candidateData = await candidates.create({
+      const candidateData = await Candidate.create({
         username: req.body.username,
         password: req.body.password
       });
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
 // cheacks candidate login information
 router.post('/login', async (req, res) => {
     try {
-        const candidateData = await candidates.findOne({ where: { username: req.body.username } });
+        const candidateData = await Candidate.findOne({ where: { username: req.body.username } });
         //check username
         if(!candidateData){
             res.status(400).json({
