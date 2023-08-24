@@ -22,7 +22,7 @@
 * {
     box-sizing: border-box;
     padding: 0;
-    margin: 10px;
+    margin: 5px;
     font-family: 'Marcellus', serif;
 }
 
@@ -30,12 +30,40 @@ body {
     background-color: var(--backgroundColor4);
 }
 
+/* Header Section containing logo, title and navigation links */
 .header {
     display: flex;
-    justify-content: ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     background-color: var(--navBar);
-
 }
+
+.logo-title {
+    display: flex;
+    align-items: bottom;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    flex-grow: 1;
+}
+
+.span-1 {
+    font-size: 3em;
+}
+
+.span-2 {
+    font-size: 2em;
+}
+
+.nav-links a {
+    font-size: 2em;
+}
+
+/* Hero Section containing message */
 .container-hero-awards {
     display: flex;
 
@@ -51,18 +79,16 @@ body {
 .hero h2, p {
     font-size: 2em;
 }
-
+/* Awards Section containing message and award icons*/
 .awards {
     background-color: var(--backgroundColor3);
     flex: 1;
+    text-align: center;
     color: var(--buttonColor);
     font-size: 1.5em;
 }
 
-.awards h3 {
-    text-align: center;
-}
-
+/* Headhunter Section containing images, job titles and names */
 .container-images {
     background-color: var(--backgroundColor2);
     color: whitesmoke;
@@ -80,10 +106,31 @@ body {
     color: var(--buttonColor);
 }
 
+/* Footer Section containing group name */
 footer {
     display: flex;
     justify-content: center;
     background-color: whitesmoke;
     font-size: 1.5em;
     color: var(--buttonColor);
+}
+
+/* Media Query for Responsive Behavior max-width 1200px */
+@media (max-width: 1200px) {
+
+}
+
+/* Media Query for Responsive Behavior max-width 1024px */
+@media (max-width: 1024px) {
+
+}
+
+/* Media Query for Responsive Behavior max-width 768px */
+@media (max-width: 768px) {
+
+}
+
+/* Media Query for Responsive Behavior max-width 480px */
+@media (max-width: 480px) {
+
 }
