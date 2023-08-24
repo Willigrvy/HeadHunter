@@ -1,6 +1,6 @@
 //dependcies
 const sequelize = require('../config/connection');
-const { headhunters, candidates, resume, job } = require('../Model');
+const { Headhunter, Candidate, Resume, Job } = require('../Model');
 const withAuth = require('../utils/auth');
 const router = require('express').Router();
 
@@ -9,7 +9,7 @@ router.get('/', withAuth, async (req, res) => {
         //get all jobs
         const jobData = await Job.findAll();
         //serialize the data
-        const jobs = jobData.map((job) => job.get({plain: true}));
+        const jobs = jobData.map((job) => Job.get({plain: true}));
         // render the dashboard view
         res.render('job-list', {
             jobs,

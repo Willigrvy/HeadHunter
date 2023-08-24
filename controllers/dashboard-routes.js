@@ -1,6 +1,6 @@
 //dependcies
 const sequelize = require('../config/connection');
-const { headhunters, candidates, resume, job } = require('../Model');
+const { Headhunter, Candidate, Resume, Job  } = require('../Model');
 const withAuth = require('../utils/auth');
 const router = require('express').Router();
 
@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
             },
         });
         //serialize the data
-        const jobs = jobData.map((job) => job.get({plain: true}));
+        const jobs = jobData.map((job) => Job.get({plain: true}));
         // render the dashboard view
         res.render('dashboard', {
             jobs,
@@ -29,7 +29,7 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/job/:id', withAuth, async (req, res) => {
     try {
         //get all candidates
-        const candidateData = await candidates.findAll({
+        const candidateData = await Candidate.findAll({
             where:{
                 job_id: req.params.id
             },
@@ -50,10 +50,10 @@ router.get('/job/:id', withAuth, async (req, res) => {
 router.get('/candidate/:id', withAuth, async (req, res) => {
     try {
         //get one candidate
-        const candidateData = await candidates.findByPk(req.params.id,{
+        const candidateData = await Candidate.findByPk(req.params.id,{
             include: [
                 {
-                  model: resume,
+                  model: Resume,
                 },
             ]
         });
