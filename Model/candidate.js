@@ -1,16 +1,16 @@
-const { Model, DataType} = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
 
-class canidates extends Model {
+class candidate extends Model {
     checkpassword(loginpw){
         return bcrypt.compareSync(loginpw, this.password)
     }
 }
 
-canidates.init(
+candidate.init(
     {
         id:{
-            type:DataType.INTEGER,
+            type:DataTypes.INTEGER,
             allowNull: false,
             primaryKey:true,
             autoIncrement:true
@@ -20,21 +20,21 @@ canidates.init(
             allowNull: false,
         },
         headhunter_id:{
-            type:DataType.INTEGER,
+            type:DataTypes.INTEGER,
             references:{
                 model:'headhunter',
                 key:'id'
             }
         },
         resume_id:{
-            type:DataType.INTEGER,
+            type:DataTypes.INTEGER,
             references:{
                 model:'resume',
                 key:'id'
             }
         },
         contact:{
-            type:DataType.STRING,
+            type:DataTypes.STRING,
             allowNull:false,
             unique:true,
             validate:{
@@ -42,7 +42,7 @@ canidates.init(
             }
         },
         password:{
-            type:DataType.STRING,
+            type:DataTypes.STRING,
             allowNull:false,
             validate:{
                 len:[10]
@@ -61,14 +61,15 @@ canidates.init(
                 return updatedUserData;
             }
         },
-    }, 
-    {
      sequelize,
      timestamps: false,
      freezeTableName: true,
      underscored: true,
-     modelName: 'canidates',
-    },
+     modelName: 'candidate',
+    
+    }, 
+    
+
     
 );
-module.exports = canidates
+module.exports = candidate

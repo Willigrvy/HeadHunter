@@ -1,8 +1,8 @@
-const {Modle, DataType} = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
 const bcrypt = require('bcrypt')
 
-class headhunters extends Modle {
+class headhunters extends Model {
     checkpassword(loginpw){
         return bcrypt.compareSync(loginpw, this.password)
     }
@@ -13,17 +13,17 @@ class headhunters extends Modle {
 headhunters.init(
     {
         id:{
-            type:DataType.INTEGER,
+            type:DataTypes.INTEGER,
             allowNull:false,
             primaryKey:true,
             autoIncrement:true
         },
         name:{
-            type:DataType.STRING,
+            type:DataTypes.STRING,
             allowNull:false
         },
         specialty:{
-            type:DataType.STRING,
+            type:DataTypes.STRING,
             allowNull:false,
         },
         username: {
@@ -31,7 +31,7 @@ headhunters.init(
             allowNull: false,
         },
         contact:{
-            type:DataType.STRING,
+            type:DataTypes.STRING,
             allowNull:false,
             unique:true,
             validate:{
@@ -39,7 +39,7 @@ headhunters.init(
             }
         },
         password:{
-            type:DataType.STRING,
+            type:DataTypes.STRING,
             allowNull:false,
             validate:{
                 len:[10]
@@ -62,7 +62,8 @@ headhunters.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'headhunter',
+        modelName: 'headhunter'
+        
     }
 );
 
