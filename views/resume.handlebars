@@ -1,0 +1,62 @@
+<body>
+<!-- Header and Navigation -->
+    <nav>
+        <h1><span class="span-1">Web</span> <span class="span-2">Hunters</span></h1>
+        <div class="nav">
+            <a href="./layouts/main.handlebars">Home</a>
+            <a href="./layouts/login.handlebars">Login</a>
+            <a href="./layouts/headhunter.handlebars">Headhunters</a>
+            <a href="./layouts/dashboard.handlebars">Candidates</a>
+        </div>
+    </nav>
+    <main>
+<!-- Recruiter note area with submit button -->
+    <div class="notes">
+        <h2>Recruiter Notes</h2>
+        <form action=" /submit" method="post"> <!-- action will need the url for backend -->
+            <label for="text">Please enter text (max 1000 words): </label><br>
+            <textarea id="text" name="text" rows="6" columns="50" maxlength="10000" oninput="checkWordLimit(this)" required></textarea><br>
+            <p id="wordCount">Words: 0 / 1000</p>
+            <button type="submit">Good Candidate!</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
+            <button type="submit">Overqualified!</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
+            <button type="submit">Submit</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
+        </form>
+    </div>
+<!--Resume form -->
+    <div class="resume">
+        <h2>Create Your Resume</h2> 
+        <form action=" /submit" method="post"> <!-- action will need the url for backend -->
+<!-- Name -->        
+            <label for="fullNmae">Full Name: </label><br>
+            <input type="text" id="fullName" name="fullName" required><br><br>
+<!-- Email -->
+            <label for="email">Email: </label><br>
+            <input type="email" id="email" name="email" required><br><br>
+<!-- Phone -->
+            <label for="phone">Phone: </label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+<!-- Experience -->
+            <label for="experience">Work Experience: </label>
+            <textarea id="experience" name="experience" rows="4" cols="50" required></textarea><br><br>
+<!-- Education -->
+            <label for="education">Education: </label>
+            <textarea id="education" name="education" rows="4" cols="50" required></textarea><br><br>
+<!-- Skills -->
+            <label for="skills">Skills: </label>
+            <textarea id="skills" name="skills" rows="4" cols="50" required></textarea><br><br>
+<!-- Hobbies -->
+            <label for="hobbies">Hobbies: </label>
+            <textarea id="hobbies" name="hobbies" rows="4" cols="50" required></textarea><br><br>
+<!-- Contact and Address -->
+            <label for="contact">Address and Contact Information: </label>
+            <textarea id="contact" name="contact" rows="4" cols="50" required></textarea><br><br>
+<!-- Submit Button -->
+            <button type="submit">Create Resume</button> <!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
+        </form> 
+    </div>
+    </main>
+<!-- Footer with Group Name -->
+    <footer class="group-name">
+        <h3>The Witty Webbers</h3>
+    </footer>
+</body>
