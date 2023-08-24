@@ -43,8 +43,13 @@ body {
 
 .hero {
     background-color: var(--backgroundColor1);
+    text-align: center;
     color: whitesmoke;
     flex: 1;
+}
+
+.hero h2, p {
+    font-size: 2em;
 }
 
 .awards {
@@ -52,6 +57,10 @@ body {
     flex: 1;
     color: var(--buttonColor);
     font-size: 1.5em;
+}
+
+.awards h3 {
+    text-align: center;
 }
 
 .container-images {
@@ -68,6 +77,7 @@ body {
 
 .name {
     font-size: 1.5em;
+    color: var(--buttonColor);
 }
 
 footer {
