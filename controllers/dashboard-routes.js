@@ -17,7 +17,7 @@ router.get('/', withAuth, async (req, res) => {
         // render the dashboard view
         res.render('dashboard', {
             jobs,
-            logged_user: req.session.user_id,
+            user_type: req.session.user_type,
             logged_in: req.session.logged_in 
         });
     } catch (err) {
@@ -39,7 +39,8 @@ router.get('/job/:id', withAuth, async (req, res) => {
         // render the dashboard view
         res.render('candidate-list', {
             candidates,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            user_type: req.session.user_type
         });
     } catch (err) {
         res.status(500).json(err);
@@ -61,7 +62,8 @@ router.get('/candidate/:id', withAuth, async (req, res) => {
         // render the dashboard view
         res.render('candidate-page', {
             candidate,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            user_type: req.session.user_type
         });
     } catch (err) {
         res.status(500).json(err);

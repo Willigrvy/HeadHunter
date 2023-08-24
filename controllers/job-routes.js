@@ -13,7 +13,8 @@ router.get('/', withAuth, async (req, res) => {
         // render the dashboard view
         res.render('job-list', {
             jobs,
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in,
+            user_type: req.session.user_type 
         });
     } catch (err) {
         res.status(500).json(err);
@@ -29,7 +30,8 @@ router.get('/job/:id', withAuth, async (req, res) => {
         // render the dashboard view
         res.render('job-page', {
             job,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            user_type: req.session.user_type
         });
     } catch (err) {
         res.status(500).json(err);
