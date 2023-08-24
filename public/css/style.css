@@ -8,11 +8,13 @@
 }
 
 :root {
-    --backgroundColor: ;
-    --navigationText: ;
-    --titleColor: ;
-    --footerColor: ;
-    --otherTextColor: ;
+    --backgroundColor1: #212221;
+    --backgroundColor2: #44449B;
+    --backgroundColor3: #1181b2;
+    --backgroundColor4: #ddedf4;
+    --navBar: white;
+    --titleColor: black;
+    --footerColor: white;
     --buttonColor: hsl(26, 73%, 57%);
     --boxShadow: grey;
 }
@@ -25,6 +27,53 @@
 }
 
 body {
-    background-color: var(--backgroundColor);
+    background-color: var(--backgroundColor4);
 }
 
+.header {
+    display: flex;
+    justify-content: ;
+    background-color: var(--navBar);
+
+}
+.container-hero-awards {
+    display: flex;
+
+}
+
+.hero {
+    background-color: var(--backgroundColor1);
+    color: whitesmoke;
+    flex: 1;
+}
+
+.awards {
+    background-color: var(--backgroundColor3);
+    flex: 1;
+    color: var(--buttonColor);
+    font-size: 1.5em;
+}
+
+.container-images {
+    background-color: var(--backgroundColor2);
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.job {
+    font-size: 1.5em;
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+    font-size: 1.5em;
+    color: var(--buttonColor);
+}

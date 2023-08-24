@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
         // render the homepage view
         res.render('homepage', {
             //insert passed on variables
+            test:"insert"
         });
     } catch (err) {
         res.status(500).json(err);
