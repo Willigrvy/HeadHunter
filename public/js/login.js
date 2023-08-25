@@ -3,8 +3,8 @@ const loginHandler = async (event) =>{
     event.preventDefault();
 
     // Get data from the form elements
-    const username = document.querySelector('#username')
-    const password = document.querySelector('#password')
+    const username = document.querySelector('#username').value.trim();
+    const password = document.querySelector('#password').value.trim();
 
     if (username && password) {
         // Send the username and password to the server
