@@ -6,7 +6,7 @@ class Job extends Model {}
 Job.init(
     {
         id:{
-            type:DataType.INTEGER,
+            type:DataTypes.INTEGER,
             allowNull: false,
             primaryKey:true,
             autoIncrement:true
@@ -24,14 +24,14 @@ Job.init(
             allowNull: false,
         },
         headhunter_id:{
-            type:DataType.INTEGER,
+            type:DataTypes.INTEGER,
             references:{
                 model:'Headhunter',
                 key:'id'
             }
         },
         canidates_id:{
-            type:DataType.INTEGER,
+            type:DataTypes.INTEGER,
             references:{
                 model:'Candidate',
                 key:'id'
