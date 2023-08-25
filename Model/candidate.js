@@ -1,42 +1,43 @@
-const {Model, DataTypes} = require('sequelize');
+const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
-const bcrypt = require('bcrypt')
 
-class Headhunter extends Model {
+class Candidate extends Model {
     checkpassword(loginpw){
         return bcrypt.compareSync(loginpw, this.password)
     }
 }
 
-
-
-Headhunter.init(
+Candidate.init(
     {
         id:{
             type:DataTypes.INTEGER,
-            allowNull:false,
+            allowNull: false,
             primaryKey:true,
             autoIncrement:true
         },
-        name:{
-            type:DataTypes.STRING,
-            allowNull:false
+        name: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         specialty:{
-            type:DataTypes.STRING,
-            allowNull:false,
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        username: {
+        username:{
             type: DataTypes.STRING,
             allowNull: false,
         },
         contact:{
-            type:DataTypes.STRING,
+            type:DataTypes.TEXT,
             allowNull:false,
             unique:true,
             validate:{
                 isEmail:true
             }
+        },
+        address:{
+            type: DataTypes.TEXT,
+            allowNull: false,
         },
         password:{
             type:DataTypes.STRING,
@@ -58,13 +59,15 @@ Headhunter.init(
                 return updatedUserData;
             }
         },
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'Headhunter'
-        
-    }
-);
+     sequelize,
+     timestamps: false,
+     freezeTableName: true,
+     underscored: true,
+     modelName: 'Candidate',
+    
+    }, 
+    
 
-module.exports = Headhunter;
+    
+);
+module.exports = Candidate

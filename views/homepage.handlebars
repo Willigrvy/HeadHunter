@@ -18,12 +18,14 @@
         </div>
 <!-- Images of Headhunters -->        
         <div class="container-images">
-            <div>
-                <img class="hunter-1" src="/images/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg" width="275px" height="375px" alt="Ugly black pug wearing denim jacket."><br>
-                <p class="job">Web Hunters CEO</p>
-                <p class="name">P. Brain McPuggy</p>
-            </div>
-            <div>
+            {{#each headhunters as |headhunter| }} 
+                <div>
+                    <!--<img class="hunter-1" src="/images/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg" width="275px" height="375px" alt="Ugly black pug wearing denim jacket."><br>-->
+                    <p class="job">{{headhunter.specialty}}</p>
+                    <p class="name">{{headhunter.name}}</p>
+                </div>
+            {{/each}}
+            {{!-- <div>
                 <img class="hunter-2" src="/images/mad-scientist-7512538_1280.jpg" width="275px" height="375px" alt="Old man crazy scientist wearing glasses and scientific head gear."><br>
                 <p class="job">Web Hunters Science Industry</p>
                 <p class="name">Uncle Stank Williams</p>
@@ -37,5 +39,5 @@
                 <img class="hunter-4" src="/images/ben-wicks-Ns96HhR-b-c-unsplash.jpg" width="275px" height="375px" alt="Smiling colorful clown giving a thumbs up."><br>
                 <p class="job">Web Hunters Business Industry</p>
                 <p class="name">Joe Kerr</p>
-            </div>
+            </div> --}}
         </div>
