@@ -1,13 +1,13 @@
 const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
 
-class candidate extends Model {
+class Candidate extends Model {
     checkpassword(loginpw){
         return bcrypt.compareSync(loginpw, this.password)
     }
 }
 
-candidate.init(
+Candidate.init(
     {
         id:{
             type:DataTypes.INTEGER,
@@ -19,27 +19,25 @@ candidate.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        headhunter_id:{
-            type:DataTypes.INTEGER,
-            references:{
-                model:'headhunter',
-                key:'id'
-            }
+        specialty:{
+            type: DataTypes.STRING,
+            allowNull: false,
         },
-        resume_id:{
-            type:DataTypes.INTEGER,
-            references:{
-                model:'resume',
-                key:'id'
-            }
+        username:{
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         contact:{
-            type:DataTypes.STRING,
+            type:DataTypes.TEXT,
             allowNull:false,
             unique:true,
             validate:{
                 isEmail:true
             }
+        },
+        address:{
+            type: DataTypes.TEXT,
+            allowNull: false,
         },
         password:{
             type:DataTypes.STRING,
@@ -65,11 +63,11 @@ candidate.init(
      timestamps: false,
      freezeTableName: true,
      underscored: true,
-     modelName: 'candidate',
+     modelName: 'Candidate',
     
     }, 
     
 
     
 );
-module.exports = candidate
+module.exports = Candidate
