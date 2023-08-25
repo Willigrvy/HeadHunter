@@ -6,7 +6,7 @@ router.post('/:id', async (req, res) => {
     try {
         const jobData = await Job.create({
             //form data
-            title: req.body,
+            title: req.body.title,
             company_name: req.body.company_name,
             job_description: req.body.job_description,
             //get headhunter from parmas
@@ -30,7 +30,7 @@ router.put('/new-candidate/:id', async (req, res) => {
         //searialize data
         const job = jobData.get({plain: true});
         //get just the previous candidate information
-        candidateList = job.candidate_id;
+        let candidateList = job.candidate_id;
         //if there were no candidates in job data
         if(!candidateList)
         {
@@ -38,7 +38,7 @@ router.put('/new-candidate/:id', async (req, res) => {
             Job.update({canidates_id: [req.body.canidates_id]});
         } else {
             // add req.bod.candidate_id to exisisting list
-            canindateList.append(req.body.canidates_id);
+            candidateList.push(req.body.canidates_id);
             //update candidate with 
             Job.update({canidates_id: candidateList});
         }
