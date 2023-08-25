@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Resume } = require('../../Model');
 
 //create resume
-router.post('/:id', async (req, res) => {
+router.post('/:job_id', async (req, res) => {
     try {
         const resumeData = await Resume.create({
             //form data
@@ -16,7 +16,7 @@ router.post('/:id', async (req, res) => {
             // the candidateloggedin
             candidate_id: req.session.user_id,
             // job id is in the params
-            job_id: req.params.id
+            job_id: req.params.job_id
 
         });
 

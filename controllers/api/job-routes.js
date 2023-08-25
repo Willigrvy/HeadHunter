@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Job } = require('../../Model');
 
 //create job
-router.post('/:id', async (req, res) => {
+router.post('/:headhunter_id', async (req, res) => {
     try {
         const jobData = await Job.create({
             //form data
@@ -10,7 +10,7 @@ router.post('/:id', async (req, res) => {
             company_name: req.body.company_name,
             job_description: req.body.job_description,
             //get headhunter from parmas
-            headhunuter_id: req.params.id
+            headhunter_id: req.params.id
         });
 
         res.status(200).json(jobData);
@@ -23,10 +23,10 @@ router.post('/:id', async (req, res) => {
 });
 
 //update with Cadidate that applied
-router.put('/new-candidate/:id', async (req, res) => {
+router.put('/new-candidate/:job_id', async (req, res) => {
     try {
         //get job data form pk in parmas
-        const jobData = await Job.findbyPk(req.params.id);
+        const jobData = await Job.findbyPk(req.params.job_id);
         //searialize data
         const job = jobData.get({plain: true});
         //get just the previous candidate information
