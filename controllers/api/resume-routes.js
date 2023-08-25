@@ -2,9 +2,23 @@ const router = require('express').Router();
 const { Resume } = require('../../Model');
 
 //create resume
-router.post('/', async (req, res) => {
+router.post('/:id', async (req, res) => {
     try {
-        const resumeData = await Resume.create(req.body);
+        const resumeData = await Resume.create({
+            //form data
+            name: req.body.name,
+            email: req.body.email,
+            phone_number: req.body.phone_number,
+            experience: req.body.experience,
+            education: req.body.education,
+            skills: req.body.skills,
+            hobbies: req.body.hobbies,
+            // the candidateloggedin
+            candidate_id: req.session.user_id,
+            // job id is in the params
+            job_id: req.params.id
+
+        });
 
         res.status(200).json(resumeData);
        
