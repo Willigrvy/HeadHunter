@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { headhunters } = require('../../Model');
+const { Headhunter } = require('../../Model');
 
 // create headhunter data for sign up
 router.post('/', async (req, res) => {
     try {
-      const headhunterData = await headhunters.create({
+      const headhunterData = await Headhunter.create({
         username: req.body.username,
         password: req.body.password
       });
@@ -27,7 +27,7 @@ router.post('/', async (req, res) => {
 // cheacks headhunter login information
 router.post('/login', async (req, res) => {
     try {
-        const headhunterData = await headhunters.findOne({ where: { username: req.body.username } });
+        const headhunterData = await Headhunter.findOne({ where: { username: req.body.username } });
         //check username
         if(!headhunterData){
             res.status(400).json({
