@@ -2,7 +2,7 @@ const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
 const bcrypt = require('bcrypt')
 
-class headhunters extends Model {
+class Headhunter extends Model {
     checkpassword(loginpw){
         return bcrypt.compareSync(loginpw, this.password)
     }
@@ -10,7 +10,7 @@ class headhunters extends Model {
 
 
 
-headhunters.init(
+Headhunter.init(
     {
         id:{
             type:DataTypes.INTEGER,
@@ -62,9 +62,9 @@ headhunters.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'headhunter'
+        modelName: 'Headhunter'
         
     }
 );
 
-module.exports = headhunters;
+module.exports = Headhunter;

@@ -1,9 +1,9 @@
 const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
 
-class notes_page extends Model {}
+class Job extends Model {}
 
-notes_page.init(
+Job.init(
     {
         id:{
             type:DataType.INTEGER,
@@ -11,37 +11,29 @@ notes_page.init(
             primaryKey:true,
             autoIncrement:true
         },
-        application_reason:{
+        title:{
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: false,
         },
-        personal_rating:{
+        company_name:{
             type: DataTypes.TEXT,
-            allowNull: true,
-        },
-        availability:{
-            type: DataTypes.TEXT,
-            allowNull: true,
-        },
-        salary_expectations:{
-            type: DataTypes.DECIMAL,
             allowNull: true,
         },
         job_description:{
             type: DataTypes.TEXT,
-            allowNull: true,
+            allowNull: false,
         },
         headhunter_id:{
             type:DataType.INTEGER,
             references:{
-                model:'headhunter',
+                model:'Headhunter',
                 key:'id'
             }
         },
         canidates_id:{
             type:DataType.INTEGER,
             references:{
-                model:'candidate',
+                model:'Candidate',
                 key:'id'
             }
         }, 
@@ -51,8 +43,8 @@ notes_page.init(
      timestamps: false,
      freezeTableName: true,
      underscored: true,
-     modelName: 'notes_page',
+     modelName: 'Job',
     }
 )
 
-module.exports = notes_page
+module.exports = Job
