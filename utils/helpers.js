@@ -8,5 +8,11 @@ module.exports = {
         return `${newDate.getMonth() + 1}/${newDate.getDate()}/${
         newDate.getFullYear()
         }`;
+    },
+    isEqual: (a, b) => {
+        if (a == b) {
+          return true;
+        } 
+        return false;
     }
 }
