@@ -12,11 +12,11 @@ Job.init(
             autoIncrement:true
         },
         title:{
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         company_name:{
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         job_description:{
