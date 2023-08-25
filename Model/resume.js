@@ -40,11 +40,26 @@ Resume.init(
             type: DataTypes.TEXT,
             allownull: true,
         },
+        canidates_id:{
+            type:DataTypes.INTEGER,
+            references:{
+                model:'Candidate',
+                key:'id'
+            }
+        }, 
+        job_id:{
+            type:DataTypes.INTEGER,
+            references:{
+                model:'Job',
+                key:'id'
+            }
+        }, 
+    },{
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Candidate',
+        modelName: 'Resume',
            
     
 
