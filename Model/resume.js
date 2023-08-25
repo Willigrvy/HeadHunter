@@ -40,11 +40,12 @@ Resume.init(
             type: DataTypes.TEXT,
             allownull: true,
         },
+    },{
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Candidate',
+        modelName: 'Resume',
            
     
 

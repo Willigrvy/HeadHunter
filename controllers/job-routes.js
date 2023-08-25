@@ -38,7 +38,7 @@ router.get('/job/:id', async (req, res) => {
     }
 });
 
-router.get('/resume/:id', withAuth, async (req, res) => {
+router.get('/resume/:id', async (req, res) => {
     //resume form
     res.render('new-resume');    
 });
