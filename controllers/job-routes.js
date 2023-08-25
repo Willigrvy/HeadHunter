@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
         //get all jobs
         const jobData = await Job.findAll();
         //serialize the data
-        const jobs = jobData.map((job) => Job.get({plain: true}));
+        const jobs = jobData.map((job) => job.get({plain: true}));
         // render the dashboard view
         res.render('job-list', {
             jobs,
@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/job/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         //get job
         const jobData = await Job.findByPk(req.params.id);

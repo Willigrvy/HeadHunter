@@ -30,7 +30,7 @@ Job.init(
                 key:'id'
             }
         },
-        candidates_id:{
+        candidate_id:{
             type:DataTypes.INTEGER,
             references:{
                 model:'Candidate',

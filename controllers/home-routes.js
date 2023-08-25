@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
     try {
         const headhunterData = await Headhunter.findAll();
         //serialize the data
-        const headhunters = headhunterData.map((headhunter) => Headhunter.get({plain: true}));
+        const headhunters = headhunterData.map((headhunter) => headhunter.get({plain: true}));
         // render the homepage view
         res.render('homepage', {
             //passed on variables

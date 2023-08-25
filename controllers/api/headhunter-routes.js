@@ -4,10 +4,7 @@ const { Headhunter } = require('../../Model');
 // create headhunter data for sign up
 router.post('/', async (req, res) => {
     try {
-      const headhunterData = await Headhunter.create({
-        username: req.body.username,
-        password: req.body.password
-      });
+      const headhunterData = await Headhunter.create(req.body);
   
       req.session.save(() => {
         req.session.user_id = headhunterData.id;
