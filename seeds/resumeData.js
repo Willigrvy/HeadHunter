@@ -1,4 +1,4 @@
-const {Resume} = require('../models');
+const {Resume} = require('../Model');
 
 
 
