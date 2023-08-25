@@ -1,46 +1,53 @@
-const {Modle, DataType} = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
 
 
-class resume extends Modle {
+class Resume extends Model {
  
 }
 
 
 
-resume.init(
+Resume.init(
     {
         
         name:{
-            type: DataType.STRING,
+            type: DataTypes.STRING,
             allowNull:false
         },
         email:{
-            type: DataType.STRING,
+            type: DataTypes.STRING,
             allowNull:false,
         },
         phone_number: {
-            type: DataType.STRING,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         experience:{
-            type: DataType.STRING,
+            type: DataTypes.TEXT,
             allowNull:false,
             
         },
         education:{
-            type:DataType.STRING,
+            type:DataTypes.TEXT,
             allowNull:false,
         },
         skills:{
-            type: DataType.STRING,
+            type: DataTypes.TEXT,
             allowNull: false,
         },
         hobbies:{
-            type: DataType.STRING,
+            type: DataTypes.TEXT,
             allownull: true,
-        }
+        },
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: 'Candidate',
+           
+    
 
     }),
 
-    module.exports = resume;
+    module.exports = Resume;
