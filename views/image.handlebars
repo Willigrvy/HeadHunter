@@ -14,8 +14,7 @@
 
           <form
             class="mt-4"
-            <!--the action calls the api call-->
-            action="api/upload/1" 
+            action="/api/upload/1"
             method="POST"
             enctype="multipart/form-data"
           >
@@ -59,5 +58,6 @@
         $("#input-files").on("change", function() {
           imagesPreview(this, "div.preview-images");
         });
+        // make fetch call to put image here?
       });
     </script>

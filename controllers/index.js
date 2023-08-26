@@ -13,7 +13,7 @@ router.use('/dashboard', dashboardRoutes);
 router.use('/jobs', jobRoutes);
 
 //api route
-router.post('api/upload/:id', upload.single("file"), uploadController.uploadFiles);
+router.post('/api/upload/:id', upload.single("file"), uploadController.uploadFiles);
 //routes to view
 router.use('/upload', uploadRoutes);
 
