@@ -20,24 +20,8 @@ Candidate.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        specialty:{
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         username:{
             type: DataTypes.STRING,
-            allowNull: false,
-        },
-        contact:{
-            type:DataTypes.STRING,
-            allowNull:false,
-            unique:true,
-            validate:{
-                isEmail:true
-            }
-        },
-        address:{
-            type: DataTypes.TEXT,
             allowNull: false,
         },
         password:{

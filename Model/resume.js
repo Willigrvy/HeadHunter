@@ -10,7 +10,6 @@ class Resume extends Model {
 
 Resume.init(
     {
-        
         name:{
             type: DataTypes.STRING,
             allowNull:false
@@ -18,15 +17,22 @@ Resume.init(
         email:{
             type: DataTypes.STRING,
             allowNull:false,
+            unique:true,
+            validate:{
+                isEmail:true
+            }
         },
         phone_number: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        address:{
             type: DataTypes.STRING,
             allowNull: false,
         },
         experience:{
             type: DataTypes.TEXT,
             allowNull:false,
-            
         },
         education:{
             type:DataTypes.TEXT,
@@ -56,13 +62,10 @@ Resume.init(
         } 
     },{
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
         modelName: 'Resume',
-           
-    
-
     }),
 
     module.exports = Resume;
