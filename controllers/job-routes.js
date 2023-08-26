@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 router.get('/:job_id', async (req, res) => {
     try {
         //get job
-        const jobData = await Job.findByPk(req.params.id);
+        const jobData = await Job.findByPk(req.params.job_id);
         //serialize the data
         const job = jobData.get({plain: true});
         // render the dashboard view
