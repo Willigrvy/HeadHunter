@@ -59,5 +59,5 @@ const HeadhunterData = [
 
 
 
-const seedHeadhunter = () => Headhunter.bulkCreate(HeadhunterData);
-module.exports =seedHeadhunter
+const headhunterseed = () => Headhunter.bulkCreate(HeadhunterData);
+module.exports =headhunterseed

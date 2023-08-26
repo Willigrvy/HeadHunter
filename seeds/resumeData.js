@@ -1,10 +1,10 @@
 const {Resume} = require('../Model');
 
-const ResumeData
+// const ResumeData
 
 
 
 
 
-//const seedResume = () => Resume.bulkCreate(ResumeData);
-//module.exports =seedResume
+const resumeseed = () => Resume.bulkCreate(ResumeData);
+module.exports =resumeseed
