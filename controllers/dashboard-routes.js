@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/candidate-list/:id', async (req, res) => {
+router.get('/candidate-list/:job_id', async (req, res) => {
     try {
         //get all candidates
         const candidateData = await Candidate.findAll({
@@ -47,7 +47,7 @@ router.get('/candidate-list/:id', async (req, res) => {
     }
 });
 
-router.get('/candidate/:id', async (req, res) => {
+router.get('/candidate/:job_id', async (req, res) => {
     try {
         //get one candidate
         const candidateData = await Candidate.findByPk(req.params.id,{

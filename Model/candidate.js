@@ -36,10 +36,10 @@ Candidate.init(
                 isEmail:true
             }
         },
-        // address:{
-        //     type: DataTypes.TEXT,
-        //     allowNull: false,
-        // },
+        address:{
+            type: DataTypes.TEXT,
+            allowNull: false,
+        },
         password:{
             type:DataTypes.STRING,
             allowNull:false,

@@ -3,20 +3,30 @@ const Headhunter = require('./headhunter');
 const Job= require('./Job');
 const Resume = require('./resume');
 
-Candidate.belongsToMany(Job,{
-    through:Resume,
-    foreignKey: 'Candidate_id'
+//headhunter and job
+Headhunter.hasMany(Job,{
+    foreignKey: 'headhunter_id'
 });
-Job.belongsToMany(Candidate,{
-    through:Resume,
-    foreignKey:'Job_id'
+
+Job.belongsTo(Headhunter,{
+    foreignKey: 'headhunter_id'
 });
-Headhunter.belongsToMany(Candidate,{
-    through:Job,
-    foreignKey:'Headhunter_id'
+
+// job and resume---------
+Job.hasMany(Resume, {
+    foreignKey: 'job_id'
 });
-Candidate.belongsToMany(Headhunter,{
-    through:Job,
+
+Resume.belongsTo(Job,{
+    foreignKey: 'job_id'
+});
+
+//candidate and resume
+Candidate.belongsTo(Resume,{
+    foreignKey: 'candidate_id'
+});
+
+Resume.hasMany(Candidate,{
     foreignKey: 'candidate_id'
 });
 
