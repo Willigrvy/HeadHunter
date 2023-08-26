@@ -110,12 +110,13 @@ body {
 footer {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: whitesmoke;
     font-size: 1.5em;
     color: var(--buttonColor);
     position: fixed;
     bottom: 0;
-    width: auto; /* Could use 100% also */
+    width: 100%; /* Could use 100% also */
     height: 60px;
 }
 
