@@ -2,6 +2,7 @@ const Candidate = require('./candidate');
 const Headhunter = require('./headhunter');
 const Job= require('./Job');
 const Resume = require('./resume');
+const Image = require('./image');
 
 //headhunter and job
 Headhunter.hasMany(Job,{
@@ -34,5 +35,6 @@ module.exports = {
     Candidate,
     Headhunter,
     Job,
-    Resume
+    Resume,
+    Image
 }
