@@ -1,34 +1,33 @@
 
-const {Job} = require('../models');
+const {Job} = require('../Model');
 
 const JobData = [
 
-    {
-        title:'',
-        Companyname:'',
-        Jobdescription:'',
-        headhunterId:'',
-    },
-    {
-        title:'',
-        Companyname:'',
-        Jobdescription:'',
-        headhunterId:'',
-    }, {
-        title:'',
-        Companyname:'',
-        Jobdescription:'',
-        headhunterId:'',
-    }, {
-        title:'',
-        Companyname:'',
-        Jobdescription:'',
-        headhunterId:'',
-    }, {
-        title:'',
-        Companyname:'',
-        Jobdescription:'',
-        headhunterId:'',
+  {
+        title:'1',
+        company_name:'1',
+        job_description:'1',
+        headhunter_id:'1',
+    },{
+        title:'1',
+        company_name:'1',
+        job_description:'1',
+        headhunter_id:'1',
+    },{
+        title:'1',
+        company_name:'1',
+        job_description:'1',
+        headhunter_id:'1',
+    },{
+        title:'1',
+        company_name:'1',
+        job_description:'1',
+        headhunter_id:'1',
+    },{
+        title:'1',
+        company_name:'1',
+        job_description:'1',
+        headhunter_id:'1',
     },
 ]
 
@@ -38,5 +37,5 @@ const JobData = [
 
 
 
-const seedJob = () => Job.bulkCreate(JobData);
-module.exports =seedJob
+const jobseed = () => Job.bulkCreate(JobData);
+module.exports =jobseed
