@@ -10,11 +10,13 @@ const seedAll = async () => {
 
 await headhunterseed();
 
-await resumeseed();
+
 
 await candidateseed();
 
 await jobseed();
+
+await resumeseed();
 
 
 

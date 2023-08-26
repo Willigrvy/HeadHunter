@@ -13,8 +13,8 @@ const ResumeData =[
     education:'1',
     skills:'1',
     hobbies:'1',
-    candidate_id:6284635,
-    job_id: 728332,
+    candidate_id:1,
+    job_id: 1,
 }
 
 ]

@@ -44,7 +44,7 @@ Resume.init(
             type: DataTypes.TEXT,
             allownull: true,
         },
-        canidate_id:{
+        candidate_id:{
             type:DataTypes.INTEGER,
             references:{
                 model:'Candidate',
