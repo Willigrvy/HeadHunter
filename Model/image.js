@@ -18,7 +18,14 @@ Image.init(
         },
         data: {
             type: DataTypes.BLOB("long"),
-        }
+        },
+        headhunter_id:{
+            type:DataTypes.INTEGER,
+            references:{
+                model:'Headhunter',
+                key:'id'
+            }
+        },
     },
     {
         sequelize,

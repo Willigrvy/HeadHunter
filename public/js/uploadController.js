@@ -16,6 +16,7 @@ const uploadFiles = async (req, res) => {
       data: fs.readFileSync(
         __dirname + "/uploads/" + req.file.filename
       ),
+      headhunter_id : req.params.id
     }).then((image) => {
         //write image to folder
       fs.writeFileSync(
@@ -30,4 +31,3 @@ const uploadFiles = async (req, res) => {
   }
 };
 module.exports = {uploadFiles,};
-//C:\Users\camil\bootcamp\HeadHunter\public\js

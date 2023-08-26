@@ -31,6 +31,13 @@ Resume.hasMany(Candidate,{
     foreignKey: 'candidate_id'
 });
 
+//headhunter and image
+Headhunter.hasOne(Image,{
+    foreignKey: 'headhunter_id'
+})
+Image.belongsTo(Headhunter,{
+    foreignKey: 'headhunter_id'
+})
 module.exports = {
     Candidate,
     Headhunter,
