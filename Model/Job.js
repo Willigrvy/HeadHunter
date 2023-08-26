@@ -1,5 +1,5 @@
 const { Model, DataTypes} = require('sequelize');
-const sequelize = require('../config/connection')
+const sequelize = require('../config/connection');
 
 class Job extends Model {}
 
@@ -12,11 +12,11 @@ Job.init(
             autoIncrement:true
         },
         title:{
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         company_name:{
-            type: DataTypes.TEXT,
+            type: DataTypes.STRING,
             allowNull: true,
         },
         job_description:{
@@ -29,18 +29,11 @@ Job.init(
                 model:'Headhunter',
                 key:'id'
             }
-        },
-        canidates_id:{
-            type:DataTypes.INTEGER,
-            references:{
-                model:'Candidate',
-                key:'id'
-            }
-        }, 
+        },         
     },
     {
      sequelize,
-     timestamps: false,
+     timestamps: true,
      freezeTableName: true,
      underscored: true,
      modelName: 'Job',

@@ -1,13 +1,4 @@
-<!-- Header and Navigation -->
-    <nav>
-        <h1><span class="span-1">Web</span> <span class="span-2">Hunters</span></h1>
-        <div class="nav">
-            <a href="/">Home</a>
-            <a href="/login">Logout</a>
-            <a href="/headhunter">Headhunters</a>
-            <a href="/dashboard">Candidates</a>
-        </div>
-    </nav>
+
 <!--Resume form -->
     <div class="resume">
         <h2>Create Your Resume</h2> 
@@ -21,6 +12,9 @@
 <!-- Phone -->
             <label for="phone">Phone: </label><br>
             <input type="tel" id="phone" name="phone" required><br><br>
+<!-- Contact and Address -->
+            <label for="contact">Address Information: </label>
+            <textarea id="contact" name="contact" rows="4" cols="50" required></textarea><br><br>
 <!-- Experience -->
             <label for="experience">Work Experience: </label>
             <textarea id="experience" name="experience" rows="4" cols="50" required></textarea><br><br>
@@ -33,9 +27,6 @@
 <!-- Hobbies -->
             <label for="hobbies">Hobbies: </label>
             <textarea id="hobbies" name="hobbies" rows="4" cols="50" required></textarea><br><br>
-<!-- Contact and Address -->
-            <label for="contact">Address and Contact Information: </label>
-            <textarea id="contact" name="contact" rows="4" cols="50" required></textarea><br><br>
 <!-- Submit Button -->
             <button type="submit">Create Resume</button> <!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
             <!--<button type="submit">Edit Resume</button>-->

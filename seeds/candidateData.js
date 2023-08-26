@@ -1,4 +1,4 @@
-const {Candidate} = require('../models');
+const {Candidate} = require('../Model');
 
 const CAndidateData = [
 

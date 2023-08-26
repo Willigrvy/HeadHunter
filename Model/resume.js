@@ -3,14 +3,11 @@ const sequelize = require('../config/connection')
 
 
 class Resume extends Model {
- 
+    
 }
-
-
 
 Resume.init(
     {
-        
         name:{
             type: DataTypes.STRING,
             allowNull:false
@@ -18,15 +15,22 @@ Resume.init(
         email:{
             type: DataTypes.STRING,
             allowNull:false,
+            unique:true,
+            validate:{
+                isEmail:true
+            }
         },
         phone_number: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        address:{
             type: DataTypes.STRING,
             allowNull: false,
         },
         experience:{
             type: DataTypes.TEXT,
             allowNull:false,
-            
         },
         education:{
             type:DataTypes.TEXT,
@@ -40,14 +44,26 @@ Resume.init(
             type: DataTypes.TEXT,
             allownull: true,
         },
+        canidate_id:{
+            type:DataTypes.INTEGER,
+            references:{
+                model:'Candidate',
+                key:'id'
+            }
+        },
+        job_id:{
+            type:DataTypes.INTEGER,
+            references:{
+                model:'Job',
+                key:'id'
+            }
+        } 
+    },{
         sequelize,
-        timestamps: false,
+        timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'Candidate',
-           
-    
-
+        modelName: 'Resume',
     }),
 
     module.exports = Resume;

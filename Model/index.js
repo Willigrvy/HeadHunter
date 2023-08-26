@@ -1,24 +1,38 @@
-const Candidate = require('./candidate')
-const Headhunter = require('./headhunter')
-const Job= require('./Job')
+const Candidate = require('./candidate');
+const Headhunter = require('./headhunter');
+const Job= require('./Job');
+const Resume = require('./resume');
 
-Candidate.hasMany(Job,{
-    foreignKey: 'Candidate_id'
+//headhunter and job
+Headhunter.hasMany(Job,{
+    foreignKey: 'headhunter_id'
 });
-Job.belongToMany(Candidate,{
-    foreignKey:'Job_id'
+
+Job.belongsTo(Headhunter,{
+    foreignKey: 'headhunter_id'
 });
-Headhunter.belongToMany(Candidate,{
-    through:Job,
-    foreignKey:'Headhunter_id'
+
+// job and resume---------
+Job.hasMany(Resume, {
+    foreignKey: 'job_id'
 });
-Candidate.belongToMany(Headhunter,{
-    through:Job,
+
+Resume.belongsTo(Job,{
+    foreignKey: 'job_id'
+});
+
+//candidate and resume
+Candidate.belongsTo(Resume,{
+    foreignKey: 'candidate_id'
+});
+
+Resume.hasMany(Candidate,{
     foreignKey: 'candidate_id'
 });
 
 module.exports = {
     Candidate,
     Headhunter,
-    Job
+    Job,
+    Resume
 }

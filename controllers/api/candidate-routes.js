@@ -4,10 +4,7 @@ const { Candidate } = require('../../Model');
 // create candidate data for sign up
 router.post('/', async (req, res) => {
     try {
-      const candidateData = await Candidate.create({
-        username: req.body.username,
-        password: req.body.password
-      });
+      const candidateData = await Candidate.create(req.body);
   
       req.session.save(() => {
         req.session.user_id = candidateData.id;
@@ -16,7 +13,7 @@ router.post('/', async (req, res) => {
         //keeps tack of what type of user is logged in
         req.session.user_type = 'candidate';
   
-        res.status(200).json(userData);
+        res.status(200).json(candidateData);
       });
     } catch (err) {
         console.log(err);

@@ -4,7 +4,7 @@ const { Headhunter, Candidate, Resume, Job  } = require('../Model');
 const withAuth = require('../utils/auth');
 const router = require('express').Router();
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         //get all jobs
         const jobData = await Job.findAll({
@@ -13,11 +13,12 @@ router.get('/', withAuth, async (req, res) => {
             },
         });
         //serialize the data
-        const jobs = jobData.map((job) => Job.get({plain: true}));
+        const jobs = jobData.map((job) => job.get({plain: true}));
         // render the dashboard view
         res.render('dashboard', {
             jobs,
             user_type: req.session.user_type,
+            logged_user: req.session.user_id,
             logged_in: req.session.logged_in 
         });
     } catch (err) {
@@ -26,42 +27,48 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 
-router.get('/job/:id', withAuth, async (req, res) => {
+router.get('/candidate-list/:job_id', async (req, res) => {
     try {
-        //get all candidates
-        const candidateData = await Candidate.findAll({
+        //get all resumes
+        const resumeData = await Resume.findAll({
             where:{
                 job_id: req.params.id
             },
-        });
-        //serialize the data
-        const candidates = candidateData.map((candidate) => candidate.get({plain: true}));
-        // render the dashboard view
-        res.render('candidate-list', {
-            candidates,
-            logged_in: req.session.logged_in,
-            user_type: req.session.user_type
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-router.get('/candidate/:id', withAuth, async (req, res) => {
-    try {
-        //get one candidate
-        const candidateData = await Candidate.findByPk(req.params.id,{
             include: [
                 {
-                  model: Resume,
+                  model: Candidate
                 },
             ]
         });
         //serialize the data
-        const candidate = candidateData.get({plain: true});
+        const resumes = resumeData.map((resume) => resume.get({plain: true}));
+        // render the dashboard view
+        res.render('candidate-list', {
+            resumes,
+            logged_in: req.session.logged_in,
+            logged_user: req.session.user_id,
+            user_type: req.session.user_type
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/candidate/:job_id', async (req, res) => {
+    try {
+        //get one candidate
+        const candidateData = await Resume.findByPk(req.params.id,{
+            include: [
+                {
+                  model: Candidate,
+                },
+            ]
+        });
+        // serialize the data
+        const resume = resumeData.get({plain: true});
         // render the dashboard view
         res.render('candidate-page', {
-            candidate,
+            resume,
             logged_in: req.session.logged_in,
             user_type: req.session.user_type
         });
@@ -70,7 +77,7 @@ router.get('/candidate/:id', withAuth, async (req, res) => {
     }
 });
 
-router.get('/new-job', withAuth, async (req, res) => {
+router.get('/new-job',  async (req, res) => {
     //new job form
     res.render('new-job');    
 });

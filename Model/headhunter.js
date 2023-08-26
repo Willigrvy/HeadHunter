@@ -8,8 +8,6 @@ class Headhunter extends Model {
     }
 }
 
-
-
 Headhunter.init(
     {
         id:{
@@ -26,17 +24,17 @@ Headhunter.init(
             type:DataTypes.STRING,
             allowNull:false,
         },
-        username: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        contact:{
+        email:{
             type:DataTypes.STRING,
             allowNull:false,
             unique:true,
             validate:{
                 isEmail:true
             }
+        },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false,
         },
         password:{
             type:DataTypes.STRING,

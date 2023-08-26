@@ -1,5 +1,6 @@
 const { Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection')
+const bcrypt = require('bcrypt');
 
 class Candidate extends Model {
     checkpassword(loginpw){
@@ -19,24 +20,8 @@ Candidate.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        specialty:{
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
         username:{
             type: DataTypes.STRING,
-            allowNull: false,
-        },
-        contact:{
-            type:DataTypes.TEXT,
-            allowNull:false,
-            unique:true,
-            validate:{
-                isEmail:true
-            }
-        },
-        address:{
-            type: DataTypes.TEXT,
             allowNull: false,
         },
         password:{
@@ -65,9 +50,7 @@ Candidate.init(
      underscored: true,
      modelName: 'Candidate',
     
-    }, 
-    
-
-    
+    },     
 );
+
 module.exports = Candidate

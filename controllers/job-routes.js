@@ -7,30 +7,33 @@ const router = require('express').Router();
 router.get('/', async (req, res) => {
     try {
         //get all jobs
-        const jobData = await Job.findAll();
+        const jobData = await Job.findAll( {order: [['created_at', 'DESC']]});
         //serialize the data
-        const jobs = jobData.map((job) => Job.get({plain: true}));
+        const jobs = jobData.map((job) => job.get({plain: true}));
         // render the dashboard view
         res.render('job-list', {
             jobs,
             logged_in: req.session.logged_in,
-            user_type: req.session.user_type 
+            logged_user: req.session.user_id,
+            user_type: req.session.user_type,
+             
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-router.get('/job/:id', async (req, res) => {
+router.get('/:job_id', async (req, res) => {
     try {
         //get job
-        const jobData = await Job.findByPk(req.params.id);
+        const jobData = await Job.findByPk(req.params.job_id);
         //serialize the data
         const job = jobData.get({plain: true});
         // render the dashboard view
         res.render('job-page', {
             job,
             logged_in: req.session.logged_in,
+            logged_user: req.session.user_id,
             user_type: req.session.user_type
         });
     } catch (err) {
@@ -38,7 +41,7 @@ router.get('/job/:id', async (req, res) => {
     }
 });
 
-router.get('/resume/:id', withAuth, async (req, res) => {
+router.get('/resume/:id', async (req, res) => {
     //resume form
     res.render('new-resume');    
 });

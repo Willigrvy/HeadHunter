@@ -1,4 +1,4 @@
-const {Headhunter} = require('../models');
+const {Headhunter} = require('../Model');
 
 const HeadhunterData = [
 

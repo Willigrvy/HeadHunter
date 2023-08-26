@@ -1,22 +1,8 @@
+<!-- Recruiter's jobs that they have posted -->
+<div class="job-list">
+    {{#each jobs as |job| }} 
+        {{>job-block}}
+        <!-- insert candidate list link here-->
+    {{/each}}
+</div>
 
-    <nav>
-        <h1><span class="span-1">Web</span> <span class="span-2">Hunters</span></h1>
-        <div class="nav">
-            <a href="/">Home</a>
-            <a href="/login">Logout</a>
-            <a href="/headhunter">Headhunters</a>
-            <a href="/resume">Resume</a>
-        </div>
-    </nav>
-
-<!-- Recruiter note area with submit button -->
-    <div class="notes">
-        <h2>Recruiter Notes</h2>
-        <form action=" /submit" method="post"> <!-- action will need the url for backend -->
-            <label for="text">Please enter text (max 1000 words): </label><br>
-            <textarea id="text" name="text" rows="6" columns="50" maxlength="10000" oninput="checkWordLimit(this)" required></textarea><br>
-            <p id="wordCount">Words: 0 / 1000</p>
-            <button type="submit">Good Candidate!</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
-            <button type="submit">Overqualified!</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
-            <button type="submit">Submit</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
-        </form>
