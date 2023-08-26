@@ -50,9 +50,7 @@ Candidate.init(
      underscored: true,
      modelName: 'Candidate',
     
-    }, 
-    
-
-    
+    },     
 );
+
 module.exports = Candidate

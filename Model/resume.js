@@ -3,10 +3,8 @@ const sequelize = require('../config/connection')
 
 
 class Resume extends Model {
- 
+    
 }
-
-
 
 Resume.init(
     {

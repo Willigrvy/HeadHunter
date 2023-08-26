@@ -8,8 +8,6 @@ class Headhunter extends Model {
     }
 }
 
-
-
 Headhunter.init(
     {
         id:{

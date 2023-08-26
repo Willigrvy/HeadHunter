@@ -12,7 +12,8 @@ router.get('/', async (req, res) => {
         res.render('homepage', {
             //passed on variables
             headhunters,
-            logged_in: req.session.logged_in, 
+            logged_in: req.session.logged_in,
+            logged_user: req.session.user_id, 
             user_type: req.session.user_type
         });
     } catch (err) {

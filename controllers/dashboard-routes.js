@@ -18,6 +18,7 @@ router.get('/', async (req, res) => {
         res.render('dashboard', {
             jobs,
             user_type: req.session.user_type,
+            logged_user: req.session.user_id,
             logged_in: req.session.logged_in 
         });
     } catch (err) {
@@ -28,18 +29,24 @@ router.get('/', async (req, res) => {
 
 router.get('/candidate-list/:job_id', async (req, res) => {
     try {
-        //get all candidates
-        const candidateData = await Candidate.findAll({
+        //get all resumes
+        const resumeData = await Resume.findAll({
             where:{
                 job_id: req.params.id
             },
+            include: [
+                {
+                  model: Candidate
+                },
+            ]
         });
         //serialize the data
-        const candidates = candidateData.map((candidate) => candidate.get({plain: true}));
+        const resumes = resumeData.map((resume) => resume.get({plain: true}));
         // render the dashboard view
         res.render('candidate-list', {
-            candidates,
+            resumes,
             logged_in: req.session.logged_in,
+            logged_user: req.session.user_id,
             user_type: req.session.user_type
         });
     } catch (err) {
@@ -50,18 +57,18 @@ router.get('/candidate-list/:job_id', async (req, res) => {
 router.get('/candidate/:job_id', async (req, res) => {
     try {
         //get one candidate
-        const candidateData = await Candidate.findByPk(req.params.id,{
+        const candidateData = await Resume.findByPk(req.params.id,{
             include: [
                 {
-                  model: Resume,
+                  model: Candidate,
                 },
             ]
         });
-        //serialize the data
-        const candidate = candidateData.get({plain: true});
+        // serialize the data
+        const resume = resumeData.get({plain: true});
         // render the dashboard view
         res.render('candidate-page', {
-            candidate,
+            resume,
             logged_in: req.session.logged_in,
             user_type: req.session.user_type
         });

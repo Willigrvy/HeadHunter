@@ -1,6 +1,6 @@
-{{#each jobs as |job| }} 
-<div>
-     <p class="job">{{job.title}}</p>
-     <p class="company">{{job.company_name}}</p>
+<!-- all avialable jobs --> 
+<div class="job-list">
+     {{#each jobs as |job| }} 
+          {{>job-block}} 
+     {{/each}}
 </div>
-{{/each}}
