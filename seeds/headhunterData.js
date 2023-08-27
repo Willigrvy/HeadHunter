@@ -6,21 +6,21 @@ const HeadhunterData = [
     
     
     name: 'P. Brain McPuggy',
-    position:'C.E.O',
+    specialty:'C.E.O',
     username: 'TheBigDog',
-    contact: 'topdog@Email.com',
-    password: 'Purebred',
-
+    email: 'topdog@Email.com',
+    password: 'Purebred123456',
+    
 
 
 },{
     
     
     name: 'Looney CrazyPants',
-    position: 'Science Industry',
+    specialty: 'Science Industry',
     username: 'TheProfessor',
-    contact: 'e=mc2@ElementInternals.com',
-    password: 'Boom',
+    email: 'e=mc2@ElementInternals.com',
+    password: 'Boom123456',
 
 
 
@@ -28,10 +28,10 @@ const HeadhunterData = [
     
     
     name: 'Hacker Cunningham',
-    position: 'Tech Industry',
+    specialty: 'Tech Industry',
     username: 'Anonymous',
-    contact:'Anon@email.com',
-    password:'Question',
+    email:'Anon@email.com',
+    password:'Question123',
 
 
 
@@ -39,10 +39,10 @@ const HeadhunterData = [
     
 
     name: 'Jo Kerr',
-    position: 'Business Industry',
+    specialty: 'Business Industry',
     username: 'Mimesnotcrimes',
-    contact: 'Bigshoes@email.com',
-    password:"Honkhonk",
+    email: 'Bigshoes@email.com',
+    password:"Honkhonk45678",
 
 
 
@@ -59,5 +59,5 @@ const HeadhunterData = [
 
 
 
-const seedHeadhunter = () => Headhunter.bulkCreate(HeadhunterData);
-module.exports =seedHeadhunter
+const headhunterseed = () => Headhunter.bulkCreate(HeadhunterData);
+module.exports =headhunterseed

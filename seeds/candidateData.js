@@ -1,6 +1,6 @@
 const {Candidate} = require('../Model');
 
-const CAndidateData = [
+const candidateData = [
 
 
   {
@@ -101,5 +101,5 @@ const CAndidateData = [
 
 
 
-const seedCandidate = () => Candidate.bulkCreate(candidateData);
-module.exports =seedCandidate
+const candidateseed = () => Candidate.bulkCreate(candidateData);
+module.exports =candidateseed

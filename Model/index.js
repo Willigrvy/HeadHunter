@@ -23,11 +23,11 @@ Resume.belongsTo(Job,{
 });
 
 //candidate and resume
-Candidate.belongsTo(Resume,{
+Resume.belongsTo(Candidate,{
     foreignKey: 'candidate_id'
 });
 
-Resume.hasMany(Candidate,{
+Candidate.hasMany(Resume,{
     foreignKey: 'candidate_id'
 });
 
