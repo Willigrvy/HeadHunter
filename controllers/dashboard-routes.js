@@ -32,7 +32,7 @@ router.get('/candidate-list/:job_id', async (req, res) => {
         //get all resumes
         const resumeData = await Resume.findAll({
             where:{
-                job_id: req.params.id
+                job_id: req.params.job_id
             },
             include: [
                 {
@@ -54,10 +54,10 @@ router.get('/candidate-list/:job_id', async (req, res) => {
     }
 });
 
-router.get('/candidate/:job_id', async (req, res) => {
+router.get('/candidate/:resume_id', async (req, res) => {
     try {
         //get one candidate
-        const candidateData = await Resume.findByPk(req.params.id,{
+        const candidateData = await Resume.findByPk(req.params.resume_id,{
             include: [
                 {
                   model: Candidate,
