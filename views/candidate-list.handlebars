@@ -1,0 +1,9 @@
+<!-- Candidate List with Information for the Headhunter -->
+{{#each resumes as |resume| }}
+<div>
+    <p class="id">{{resume.candidate.id}}</p>
+    <p class="name" href="/dashboard/candidate/{{resume.candidate.id}}">{{resume.candidate.name}}</p>
+    <p class="email">{{resume.email}}</p>
+    <p class="phone-number">{{resume.phone_number}}</p>
+</div>
+{{/each}}
