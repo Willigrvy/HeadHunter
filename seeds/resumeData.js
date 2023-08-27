@@ -12,8 +12,8 @@ const ResumeData =[
     skills:'Building rockets that dont explode most of the time.',
     education:'Elite College',
     hobbies:'GLueing squirels to the fence',
-    candidate_id:6284635,
-    job_id: 728332
+    candidate_id: 1,
+    job_id: 2
 },
 
 {
@@ -25,8 +25,8 @@ const ResumeData =[
     skills:'designing planes that go fast',
     education:'Notsogreat college',
     hobbies:'pretending to be the a ghost at the local mall',
-    candidate_id:6243244,
-    job_id: 483957
+    candidate_id:  2,
+    job_id: 1
 },
 
 {
@@ -38,8 +38,8 @@ const ResumeData =[
     skills:'N/A',
     education:'Royal oaks H.S.',
     hobbies:'Pranking elderly people',
-    candidate_id:8765244,
-    job_id: 845217
+    candidate_id: 3,
+    job_id: 2
 },{
     name:'James Jones',
     email:'James Jones@email.com',
@@ -49,8 +49,8 @@ const ResumeData =[
     skills:'Hacking',
     education:'Royal oaks H.S.',
     hobbies:'Pranking elderly people',
-    candidate_id: 9604565,
-    job_id: 785638,
+    candidate_id: 4,
+    job_id: 3,
 },{
     name:'Ethan Garica',
     email:'Ethangarica@email.com',
@@ -60,8 +60,8 @@ const ResumeData =[
     skills:'Wed developing',
     education:'Innercity H.S.',
     hobbies:'trading crypto stock',
-    candidate_id:8974356,
-    job_id: 984578
+    candidate_id: 5,
+    job_id: 3
 },{
     name:'Samuel Miller',
     email:'Samuelmiller@email.com',
@@ -71,8 +71,8 @@ const ResumeData =[
     skills:'Managing, Making baloonanimals',
     education:'Royal oaks H.S.',
     hobbies:'Showing up to parties uninvited',
-    candidate_id:3849723,
-    job_id: 847659
+    candidate_id: 6,
+    job_id: 4
 },{
     name:'Andrew Davis',
     email:'Andrewdavis@email.com',
@@ -82,8 +82,8 @@ const ResumeData =[
     skills:'really good at animal testing',
     education:'Prestigous Univerity',
     hobbies:'Pranking elderly people',
-    candidate_id:3827564,
-    job_id: 982653
+    candidate_id: 2,
+    job_id: 2
 },{
     name:'Matthew Johnson',
     email:'Matthewjohnson@email.com',
@@ -93,8 +93,8 @@ const ResumeData =[
     skills:'N/A',
     education:'Royal oaks H.S.',
     hobbies:'Pranking elderly people',
-    candidate_id:1826526,
-    job_id: 727384
+    candidate_id: 1,
+    job_id: 1
 },
 
 

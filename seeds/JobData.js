@@ -22,7 +22,7 @@ const JobData = [
         title:'Assistant Mad Scientist',
         company_name:'1',
         job_description:'1',
-        headhunter_id:'11',
+        headhunter_id:'1',
     },{
         title:'Wage Slave',
         company_name:'WeHateYou',
