@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Resume } = require('../../Model');
+const { Resume, Candidate } = require('../../Model');
 
 //create resume
 router.post('/:job_id', async (req, res) => {
@@ -29,5 +29,44 @@ router.post('/:job_id', async (req, res) => {
     }
 });
 
+//get resumes
+router.get('/', async (req, res) => {
+    try {
+        const resumeData = await Resume.findAll({
+            include: [
+                {
+                  model: Candidate
+                },
+            ],
+        });
+
+        res.status(200).json(resumeData);
+       
+    } catch (err) {
+        console.log(err);
+        //400 is bad request
+        res.status(400).json(err);
+    }
+});
+
+//get resumes
+router.get('/:resume_id', async (req, res) => {
+    try {
+        const resumeData = await Resume.findByPk(req.params.resume_id,{
+            include: [
+                {
+                  model: Candidate
+                },
+            ],
+        });
+
+        res.status(200).json(resumeData);
+       
+    } catch (err) {
+        console.log(err);
+        //400 is bad request
+        res.status(400).json(err);
+    }
+});
 
 module.exports = router;

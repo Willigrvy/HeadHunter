@@ -38,7 +38,7 @@ router.get('/candidate-list/:job_id', async (req, res) => {
                 {
                   model: Candidate
                 },
-            ]
+            ],
         });
         //serialize the data
         const resumes = resumeData.map((resume) => resume.get({plain: true}));
@@ -54,15 +54,18 @@ router.get('/candidate-list/:job_id', async (req, res) => {
     }
 });
 
-router.get('/candidate/:resume_id', async (req, res) => {
+router.get('/candidate-page/:resume_id', async (req, res) => {
     try {
         //get one candidate
-        const candidateData = await Resume.findByPk(req.params.resume_id,{
+        const resumeData = await Resume.findOne({
+            where:{
+                id: req.params.resume_id
+            },
             include: [
                 {
-                  model: Candidate,
+                  model: Candidate
                 },
-            ]
+            ],
         });
         // serialize the data
         const resume = resumeData.get({plain: true});
@@ -70,7 +73,8 @@ router.get('/candidate/:resume_id', async (req, res) => {
         res.render('candidate-page', {
             resume,
             logged_in: req.session.logged_in,
-            user_type: req.session.user_type
+            logged_user: req.session.user_id,
+            user_type: req.session.user_type,
         });
     } catch (err) {
         res.status(500).json(err);
