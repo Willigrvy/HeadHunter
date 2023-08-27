@@ -7,9 +7,7 @@ const candidateData = [
     
         
         name: 'Noah Smith',
-        position:'Tech',
         username:'Noahsmith',
-        contact:'Noahsmith@email.com',
         password:'123456',
     
     
@@ -18,9 +16,7 @@ const candidateData = [
     
         
         name: 'Elijah Williams',
-        position:'Tech',
         username:'Elijahwilliams',
-        contact:'Elijahwilliams@email.com',
         password:'verygoodpass',
     
     
@@ -29,9 +25,7 @@ const candidateData = [
     
         
         name: 'Levi Brown',
-        position:'Tech',
         username:'Levibrown',
-        contact:'Levibrown@email.com',
         password:'maximumsecruity',
     
     
@@ -40,9 +34,7 @@ const candidateData = [
     
         
         name: 'James Jones',
-        position:'Buisness',
         username:'Jamesjones',
-        contact:'Jamesjones@email.com',
         password:'heavydutypass',
     
     
@@ -51,9 +43,7 @@ const candidateData = [
     
         
         name: 'Ethan Garica',
-        position:'Buisness',
         username:'Ethangarcia',
-        contact:'Ethangarcia@email.com',
         password:'lockandkey',
     
     
@@ -62,9 +52,7 @@ const candidateData = [
     
         
         name: 'Samuel Miller',
-        position:'Buisness',
         username:'Samuelmiller',
-        contact:'Samuelmiller@email.com',
         password:'shackle',
     
     
@@ -73,9 +61,7 @@ const candidateData = [
     
         
         name: ' Andrew Davis',
-        position:'Science',
         username:'Andewdavis',
-        contact:'Andrewdavis@email.com',
         password:'cuffed4life',
     
     
@@ -84,9 +70,7 @@ const candidateData = [
     
         
         name: 'Matthew Johnson',
-        position:'Science',
         username:'Matthewjohnson',
-        contact:'Matthewjohnson@email.com',
         password:'deathpenalty',
     
     
