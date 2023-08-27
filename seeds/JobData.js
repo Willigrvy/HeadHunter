@@ -2,8 +2,7 @@
 const {Job} = require('../Model');
 
 const JobData = [
-
-  {
+    {
         title:'Aerospace Engineer',
         company_name:'Sputnik R',
         job_description:'We need Spaceships built by you!!!',
@@ -31,11 +30,6 @@ const JobData = [
     },
 ]
 
-
-
-
-
-
-
 const jobseed = () => Job.bulkCreate(JobData);
+
 module.exports =jobseed

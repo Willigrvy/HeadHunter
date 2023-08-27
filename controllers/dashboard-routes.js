@@ -11,6 +11,7 @@ router.get('/', async (req, res) => {
             where:{
                 headhunter_id: req.session.user_id
             },
+            order: [['created_at', 'DESC']]
         });
         //serialize the data
         const jobs = jobData.map((job) => job.get({plain: true}));

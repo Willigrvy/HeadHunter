@@ -8,19 +8,15 @@ const jobseed = require ('../seeds/jobData');
 const seedAll = async () => {
     await sequelize.sync({ force: true });
 
-await headhunterseed();
+    await headhunterseed();
 
+    await candidateseed();
 
+    await jobseed();
 
-await candidateseed();
-
-await jobseed();
-
-await resumeseed();
-
-
-
+    await resumeseed();
 
     process.exit(0);
 };
+
 seedAll();
