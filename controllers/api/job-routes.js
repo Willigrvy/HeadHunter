@@ -9,8 +9,8 @@ router.post('/', async (req, res) => {
             title: req.body.title,
             company_name: req.body.company_name,
             job_description: req.body.job_description,
-            //get headhunter from parmas
-            headhunter_id: req.body.headhunter_id
+            //get headhunter from session
+            headhunter_id: req.session.user_id
         });
 
         res.status(200).json(jobData);

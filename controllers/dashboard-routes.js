@@ -83,8 +83,16 @@ router.get('/candidate-page/:resume_id', async (req, res) => {
 });
 
 router.get('/new-job',  async (req, res) => {
-    //new job form
-    res.render('new-job');    
+    try {
+        //job form
+        res.render('new-job', {
+            logged_in: req.session.logged_in,
+            logged_user: req.session.user_id,
+            user_type: req.session.user_type
+        }); 
+    } catch (err) {
+        res.status(500).json(err);
+    }
 });
 
 
