@@ -2,8 +2,9 @@
 {{#each resumes as |resume| }}
 <div>
     <p class="id">id: {{resume.Candidate.id}}</p>
-    <p class="name" href="/dashboard/candidate-page/{{resume.Candidate.id}}">{{resume.Candidate.name}}</p>
+    <a class="name" href="/dashboard/candidate-page/{{resume.Candidate.id}}">{{resume.Candidate.name}}</a>
     <p class="email">{{resume.email}}</p>
     <p class="phone-number">{{resume.phone_number}}</p>
+    <p class="date">applied on {{format_date resume.createdAt}}</p>
 </div>
 {{/each}}

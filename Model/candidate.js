@@ -20,6 +20,10 @@ Candidate.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        specialty:{
+            type:DataTypes.STRING,
+            allowNull:true,
+        },
         username:{
             type: DataTypes.STRING,
             allowNull: false,
