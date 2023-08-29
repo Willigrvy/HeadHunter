@@ -70,7 +70,10 @@ const signupFormHandler = async (event) => {
 
   // if sucessful redirect user to dashboard
   if(response.ok){
-    document.location.replace('/dashboard');
+    if(userType == 'headhunter')
+      document.location.replace('/dashboard');
+    if(userType == 'candidate')
+      document.location.replace('/jobs');
   } else {
       alert(response.statusText);
   }
