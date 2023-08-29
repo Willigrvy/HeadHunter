@@ -34,7 +34,15 @@ Candidate.init(
             validate:{
                 len:[10]
             }
-        }
+        },
+        email:{
+            type:DataTypes.STRING,
+            allowNull: false,
+            unique:true,
+            validate:{
+                isEmail:true
+            }
+        },
 
     },
     {
