@@ -1,16 +1,16 @@
 <!-- New Job Form -->
-    <div class="new-job-list"></div>
-        <h2>Newest Job Listings</h1>
+    <h2 class="new-job-list-title">Newest Job Listings</h1>
+    <div class="new-job-list">
         <form action=" /api/jobs/" method="post">
 <!-- Job Title -->
-            <label class="new-job-title" for="jobTitle">Job Title: </label><br>
+            <label class="new-job-title" for="jobTitle">Job Title: </label>
             <input type="text" id="jobTitle" name="title" required><br><br>
 <!-- Company Name -->
-            <label class="new-job-co-name" for="companyName">Company Name: </label><br>
+            <label class="new-job-co-name" for="companyName">Company Name: </label>
             <input type="text" id="companyName" name="company" required><br><br>
 <!-- Job Description -->
             <label class="new-job-desc" for="jobDescription">Job Description (Up to 5000 characters): </label>
-            <textarea id="jobDescription" name="description" rows="4" cols="50" maxlength="5000" required></textarea><br><br>
+            <textarea id="jobDescription" name="description" rows="10" cols="100" maxlength="5000" required></textarea><br><br>
 <!-- Submit Button -->
             <button class="new-job-btn" type="submit">Submit</button>
         </form>
