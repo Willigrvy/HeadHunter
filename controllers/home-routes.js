@@ -1,11 +1,17 @@
 const sequelize = require('../config/connection');
-const { Headhunter } = require('../Model');
+const { Headhunter, Image } = require('../Model');
 const router = require('express').Router();
 
 //the home page
 router.get('/', async (req, res) => {
     try {
-        const headhunterData = await Headhunter.findAll();
+        const headhunterData = await Headhunter.findAll({
+            include: [
+                {
+                  model: Image
+                },
+            ],
+        });
         //serialize the data
         const headhunters = headhunterData.map((headhunter) => headhunter.get({plain: true}));
         // render the homepage view

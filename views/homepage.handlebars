@@ -19,26 +19,20 @@
 <!-- Images of Headhunters -->        
         <div class="container-images">
             {{#each headhunters as |headhunter| }} 
-                <div>
+                <div class="heahunter-info">
                     <!--<img class="hunter-1" src="/images/charlesdeluvio-K4mSJ7kc0As-unsplash.jpg" width="275px" height="375px" alt="Ugly black pug wearing denim jacket."><br>-->
+                    {{#if headhunter.Image.name}}
+                    <img src="/js/uploads/{{headhunter.Image.name}}"  class="profile-image" alt="profile pic for {{headhunter.id}}">
+                    {{/if}}
                     <p class="job">{{headhunter.specialty}}</p>
                     <p class="name">{{headhunter.name}}</p>
                     <p class="email">{{headhunter.email}}</p>
                 </div>
             {{/each}}
-            {{!-- <div>
-                <img class="hunter-2" src="/images/mad-scientist-7512538_1280.jpg" width="275px" height="375px" alt="Old man crazy scientist wearing glasses and scientific head gear."><br>
-                <p class="job">Web Hunters Science Industry</p>
-                <p class="name">Uncle Stank Williams</p>
-            </div>
-            <div>
-                <img class="hunter-3" src="/images/eyasu-etsub-eiC19xZt0G0-unsplash.jpg" width="275px" height="375px" alt="Profile of masked hacker wearing all black and holding roses."><br>
-                <p class="job">Web Hunters Tech Industry</p>
-                <p class="name">Hacker Cunningham</p>
-            </div>
-            <div>
-                <img class="hunter-4" src="/images/ben-wicks-Ns96HhR-b-c-unsplash.jpg" width="275px" height="375px" alt="Smiling colorful clown giving a thumbs up."><br>
-                <p class="job">Web Hunters Business Industry</p>
-                <p class="name">Joe Kerr</p>
-            </div> --}}
         </div>
+        {{#if (isEqual user_type 'headhunter')}}
+        <a href="/upload">Upload profile image</a>
+        {{/if}}
+
+
+
