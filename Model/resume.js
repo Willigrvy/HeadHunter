@@ -60,36 +60,7 @@ Resume.init(
         } 
     },
     {
-        hooks:{
-            beforeCreate: async (newUserData)=>{
-                newUserData.address = await bcrypt.hash(newUserData.address);
-                return newUserData;
-            },
-            beforeUpdate: async(updatedUserData) => {
-                updatedUserData.address = await bcrypt.hash(updatedUserData);
-                return updatedUserData;
-            }
-        },
-        hooks:{
-            beforeCreate: async (newUserData)=>{
-                newUserData.email = await bcrypt.hash(newUserData.email);
-                return newUserData;
-            },
-            beforeUpdate: async(updatedUserData) => {
-                updatedUserData.email = await bcrypt.hash(updatedUserData);
-                return updatedUserData;
-            }
-        },
-        hooks:{
-            beforeCreate: async (newUserData)=>{
-                newUserData.phone_number = await bcrypt.hash(newUserData.phone_number);
-                return newUserData;
-            },
-            beforeUpdate: async(updatedUserData) => {
-                updatedUserData.phone_number = await bcrypt.hash(updatedUserData);
-                return updatedUserData;
-            }
-        },
+
         sequelize,
         timestamps: true,
         freezeTableName: true,
