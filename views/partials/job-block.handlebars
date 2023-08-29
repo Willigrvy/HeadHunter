@@ -3,4 +3,8 @@
     <a href="/jobs/{{id}}" class="job">{{title}}</a>
     <p class="company">{{company_name}}</p>
     <p class="date">{{format_date createdAt}}</p>
+    {{!-- can only show canidate list if user is headhunter --}}
+    {{#if (isEqual user_type 'headhunter')}}
+        <a href="/dashboard/candidate-list/{{id}}">candidate-list</a>
+    {{/if}}
 </div>

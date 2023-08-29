@@ -1,8 +1,8 @@
-
+<div>Applying for {{job.title}}</div>
 <!--Resume form -->
     <div class="resume">
         <h2>Create Your Resume</h2> 
-        <form id="resume"> <!-- action will need the url for backend -->
+        <form id="resume" job-id="{{job.id}}"> <!-- action will need the url for backend -->
 <!-- Name -->        
             <label for="fullNmae">Full Name: </label><br>
             <input type="text" id="fullName" name="name" required><br><br>
@@ -26,7 +26,7 @@
             <textarea id="skills" name="skills" rows="4" cols="50" required></textarea><br><br>
 <!-- Hobbies -->
             <label for="hobbies">Hobbies: </label>
-            <textarea id="hobbies" name="hobbies" rows="4" cols="50" required></textarea><br><br>
+            <textarea id="hobbies" name="hobbies" rows="4" cols="50"></textarea><br><br>
 <!-- Submit Button -->
             <button type="submit">Create Resume</button> <!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
             <!--<button type="submit">Edit Resume</button>-->

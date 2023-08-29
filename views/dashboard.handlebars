@@ -1,9 +1,9 @@
 <a href="/dashboard/new-job/{{user_id}}">Post a new job</a>
-
+{{user_type}}
 <!-- Recruiter's jobs that they have posted -->
 <div class="job-list">
     {{#each jobs as |job| }} 
-        {{>job-block}}
+        {{>job-block user_type=../user_type}}
         <!-- insert candidate list link here-->
     {{/each}}
 </div>
