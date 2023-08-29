@@ -1,57 +1,63 @@
-<!-- Sign-up Form -->  
-    <h2>Sign-up</h2>  
+<!-- Sign-up Form --> 
+<div class="sign-log-container">
+    <div>
+    <h2 class="sign-log-title">Sign-up</h2>
     <form class="sign-up-form"><!-- action will need the url for backend -->
         <!-- username -->
         <label for="username">Username: </label>
-        <input type="text" id="username-signup" name="username" required><br><br>
+        <input type="text" id="username-signup" name="username" required><br>
         <!-- password -->
         <label for="password">Password: </label>
-        <input type="password" id="password-signup" name="password" required><br><br>
+        <input type="password" id="password-signup" name="password" required><br>
         <!-- name -->
         <label for="name">Name: </label>
-        <input type="text" id="name-signup" name="name" required><br><br>
+        <input type="text" id="name-signup" name="name" required><br>
         <!-- email -->
         <label for="email">email: </label>
-        <input type="email" id="email-signup" name="email" required><br><br>
+        <input type="email" id="email-signup" name="email" required><br>
         <!-- specialty -->
-        <label for="specialty">speciality (optional): </label>
-        <input type="text" id="specialty-signup" name="specialty">
+        <label for="specialty">Speciality (optional): </label>
+        <input type="text" id="specialty-signup" name="specialty"><br>
         <!-- type of user-->
         <div class="form-group">
             <label for="user-type-signin">Signing up as a: </label>
             <select name="user-type" id="user-type-signup">
-                <option value="candidate">candidate</option>
-                <option value="headhunter" selected>headhunter</option>
-            </select>
+                <option value="candidate">Candidate</option>
+                <option value="headhunter" selected>Headhunter</option>
+            </select><br><br>
         </div>
         <!-- button -->
-        <button type="submit">Sign-up</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
+        <button class="btn-sign-up" type="submit">Sign-up</button><!--Submit buttons can add an Action set to "/submit", and can replace that with a url for backend -->
     </form>
+    </div>
 
 <!--Login Form -->
-    <h2>Login</h2>
+    <div>
+    <h2 class="sign-log-title">Login</h2>
     <form class="form login-form">
         <div class="form-group">
-            <label for="username-login">username:</label>
+            <label for="username-login">Username:</label>
             <input class="form-input" type="text" id="username-login" />
         </div>
         <div class="form-group">
-            <label for="password-login">password:</label>
+            <label for="password-login">Password:</label>
             <input class="form-input" type="password" id="password-login" />
         </div>
         <!-- type of user-->
         <div class="form-group">
-            <label for="user-type-login">Loggining in as a: </label>
+            <label for="user-type-login">Logging in as a: </label>
             <select name="user-type" id="user-type-login">
-                <option value="candidate">candidate</option>
-                <option value="headhunter" selected>headhunter</option>
-            </select>
+                <option value="candidate">Candidate</option>
+                <option value="headhunter" selected>Headhunter</option>
+            </select><br><br>
         </div>
         <!--insert drop down list with two options headhunter or candidate-->
         <div class="form-group">
             <button class="btn btn-primary" type="submit">Login</button>
         </div>
     </form>
+    </div>
+</div>
 
 <script src="/js/login.js"></script>
 

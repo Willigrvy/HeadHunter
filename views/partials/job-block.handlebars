@@ -1,8 +1,9 @@
 <div class="job-block">
     <!-- link the title to job page-->
-    <a href="/jobs/{{id}}" class="job">{{title}}</a>
+    <a href="/jobs/{{id}}" class="job-title">{{title}}</a>
     <p class="company">{{company_name}}</p>
     <p class="date">{{format_date createdAt}}</p>
+    <hr class="custom-hr">
     {{!-- can only show canidate list if user is headhunter --}}
     {{#if (isEqual user_type 'headhunter')}}
         <a href="/dashboard/candidate-list/{{id}}">candidate-list</a>

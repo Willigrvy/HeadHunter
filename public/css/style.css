@@ -47,7 +47,7 @@ body {
 
 .nav-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     padding-left: 20px;
     flex-grow: 1;
 }
@@ -114,9 +114,42 @@ body {
 }
 
 /* Sign-up and Login Sections */
+.sign-log-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
+.sign-up-form {
+    background-color: var(--backgroundColor2);
+    flex: 2;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
+}
+
+.form, .login-form {
+    background-color: var(--backgroundColor3);
+    flex: 1;
+    color: white;
+    font-size: 1.5em;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
+}
+
+.sign-log-title {
+    text-align: center;
+    font-size: 3em;
+} 
 
 /* New Resume Section and New Job Listings */
+.applying-for {
+    font-size: 2em;
+}
+
 .resume-title, .new-job-list-title {
     text-align: center;
     margin-top: 20px;
@@ -137,13 +170,12 @@ body {
     font-size: 1.5em;
 }
 
-.resume label, .new-job-list label {
+.resume label, .new-job-list label, .sign-up-form label, .login-form label {
     display: block;
     font-weight: 600;
-
 }
 
-.resume input, .new-job-list input {
+.resume input, .new-job-list input, .sign-up-form input, .login-form input, .form-group select {
     font-size: 20px;
     padding: 10px;
     border: 3px solid black;
@@ -158,14 +190,30 @@ body {
     border-radius: 5px;
 }
 
-.resume button, .new-job-list button {
+.resume button, .new-job-list button, .btn-primary,
+.btn-sign-up {
     background-color: var(--buttonColor);
     color: white;
     font-size: 1.25em;
     padding: 5px;
     border-radius: 5px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
-    ;
+}
+
+/* Candidates Section */
+.candidates, .job-block {
+    padding: 10px;
+}
+
+.name, .job-title {
+    font-size: 2.5em;
+}
+
+.custom-hr {
+    border: none;
+    background-color: #44449B;
+    height: 2px;
+    margin: 10px 0;
 }
 
 /* Footer Section containing group name */
