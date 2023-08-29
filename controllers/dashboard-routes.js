@@ -4,7 +4,7 @@ const { Headhunter, Candidate, Resume, Job  } = require('../Model');
 const withAuth = require('../utils/auth');
 const router = require('express').Router();
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
         //get all jobs
         const jobData = await Job.findAll({
@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
 });
 
 
-router.get('/candidate-list/:job_id', async (req, res) => {
+router.get('/candidate-list/:job_id', withAuth, async (req, res) => {
     try {
         //get all resumes
         const resumeData = await Resume.findAll({
@@ -55,7 +55,7 @@ router.get('/candidate-list/:job_id', async (req, res) => {
     }
 });
 
-router.get('/candidate-page/:resume_id', async (req, res) => {
+router.get('/candidate-page/:resume_id', withAuth, async (req, res) => {
     try {
         //get one candidate
         const resumeData = await Resume.findOne({
@@ -82,7 +82,7 @@ router.get('/candidate-page/:resume_id', async (req, res) => {
     }
 });
 
-router.get('/new-job',  async (req, res) => {
+router.get('/new-job', withAuth, async (req, res) => {
     try {
         //job form
         res.render('new-job', {

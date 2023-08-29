@@ -21,7 +21,9 @@
             {{else}}
                 <a class="login" href="/login">Login</a>
             {{/if}}
+            {{#if (isEqual user_type 'headhunter')}}
             <a href="/dashboard">Dashboard</a>
+            {{/if}}
             <a href="/jobs">Jobs</a>
         </nav>
     </header>
