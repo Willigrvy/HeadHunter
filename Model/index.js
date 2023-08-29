@@ -2,6 +2,7 @@ const Candidate = require('./candidate');
 const Headhunter = require('./headhunter');
 const Job= require('./Job');
 const Resume = require('./resume');
+const Image = require('./image');
 
 //headhunter and job
 Headhunter.hasMany(Job,{
@@ -30,9 +31,17 @@ Candidate.hasMany(Resume,{
     foreignKey: 'candidate_id'
 });
 
+//headhunter and image
+Headhunter.hasOne(Image,{
+    foreignKey: 'headhunter_id'
+})
+Image.belongsTo(Headhunter,{
+    foreignKey: 'headhunter_id'
+})
 module.exports = {
     Candidate,
     Headhunter,
     Job,
-    Resume
+    Resume,
+    Image
 }

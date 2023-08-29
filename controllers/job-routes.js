@@ -41,10 +41,15 @@ router.get('/:job_id', async (req, res) => {
     }
 });
 
-router.get('/resume/:id', async (req, res) => {
+router.get('/resume/:job_id', async (req, res) => {
     try {
+        //get job
+        const jobData = await Job.findByPk(req.params.job_id);
+        //serialize the data
+        const job = jobData.get({plain: true});
         //resume form
         res.render('new-resume', {
+            job,
             logged_in: req.session.logged_in,
             logged_user: req.session.user_id,
             user_type: req.session.user_type

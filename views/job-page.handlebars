@@ -1,8 +1,10 @@
 <!-- Shows all jobs details -->
 <!-- Insert an if statement-->
      <!--if user_type == 'headhunter' and job.heahunter_id == logged_user-->
+          {{#if (isEqual user_type 'headhunter')}} 
           <!--have a link to caniddate list-->
-<a href="/dashboard/candidate-list/{{job.id}}">candidate list</a>
+               <a href="/dashboard/candidate-list/{{job.id}}">candidate list</a>
+          {{/if}}
 <div class="full-job-block">
      <a class="job">{{job.title}}</p>
      <p class="company">{{job.company_name}}</p>
@@ -10,6 +12,11 @@
      <p class="date">posted on {{format_date job.createdAt}}</p>
 </div>
 <!-- Insert an if statement-->
-     <!-- if user_type == 'candidate'--> 
+     <!-- if user_type == 'candidate'-->
+     
+     {{#if (isEqual user_type 'candidate')}} 
           <!--apply that links to new resume-->
           <a href="/jobs/resume/{{job.id}}">Apply here</a>
+     {{else}}
+          <p>You must be logged in as a candidate to apply</p>
+     {{/if}}

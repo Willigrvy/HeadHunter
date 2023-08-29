@@ -108,6 +108,11 @@ body {
     color: var(--buttonColor);
 }
 
+.profile-image{
+    max-width: 200px;
+    max-height: 300px;
+}
+
 /* Sign-up and Login Sections */
 
 

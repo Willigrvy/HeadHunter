@@ -17,11 +17,13 @@
         <nav class="nav-links">
             <a href="/">Home</a>
             {{#if logged_in}}
-                <a href="/logout" user-type="{{user_type}}"></a>
+                <a id="logout" user-type="{{user_type}}">Logout</a>
             {{else}}
-                <a href="/login">Login</a>
+                <a class="login" href="/login">Login</a>
             {{/if}}
+            {{#if (isEqual user_type 'headhunter')}}
             <a href="/dashboard">Dashboard</a>
+            {{/if}}
             <a href="/jobs">Jobs</a>
         </nav>
     </header>

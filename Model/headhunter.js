@@ -3,7 +3,7 @@ const sequelize = require('../config/connection')
 const bcrypt = require('bcrypt')
 
 class Headhunter extends Model {
-    checkpassword(loginpw){
+    checkPassword(loginpw){
         return bcrypt.compareSync(loginpw, this.password)
     }
 }
@@ -26,7 +26,7 @@ Headhunter.init(
         },
         email:{
             type:DataTypes.STRING,
-            allowNull:false,
+            allowNull: false,
             unique:true,
             validate:{
                 isEmail:true
