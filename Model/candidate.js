@@ -48,6 +48,16 @@ Candidate.init(
     {
         hooks:{
             beforeCreate: async (newUserData)=>{
+                newUserData.email = await bcrypt.hash(newUserData.email);
+                return newUserData;
+            },
+            beforeUpdate: async(updatedUserData) => {
+                updatedUserData.email = await bcrypt.hash(updatedUserData);
+                return updatedUserData;
+            }
+        },
+        hooks:{
+            beforeCreate: async (newUserData)=>{
                 newUserData.password = await bcrypt.hash(newUserData.password,12);
                 return newUserData;
             },
