@@ -23,7 +23,13 @@ router.get('/', async (req, res) => {
 
 //the login page
 router.get('/login', async (req, res) => {
-    res.render('login');    
+    res.render('login',
+        {
+            //passed on variables
+            logged_in: req.session.logged_in,
+            logged_user: req.session.user_id, 
+            user_type: req.session.user_type
+        });    
 });
 
 module.exports = router;

@@ -15,11 +15,14 @@ const loginHandler = async (event) =>{
           headers: { 'Content-Type': 'application/json' },
         });
     
-        if (response.ok) {
-          document.location.replace('/');
-        } else {
-          alert('Failed to log in');
-        }
+    if(response.ok){
+      if(userType == 'headhunter')
+          document.location.replace('/dashboard');
+      if(userType == 'candidate')
+          document.location.replace('/jobs');
+      } else {
+          alert(response.statusText);
+      }
     }
 }
 
