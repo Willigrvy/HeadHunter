@@ -108,6 +108,9 @@ body {
     color: var(--buttonColor);
 }
 
+/* Sign-up and Login Sections */
+
+
 /* New Resume Section and New Job Listings */
 .resume-title, .new-job-list-title {
     text-align: center;
@@ -138,13 +141,15 @@ body {
 .resume input, .new-job-list input {
     font-size: 20px;
     padding: 10px;
+    border: 3px solid black;
+    border-radius: 5px;
 }
 
 .resume textarea, .new-job-list textarea {
     font-size: 20px;
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 3px solid black;
     border-radius: 5px;
 }
 
