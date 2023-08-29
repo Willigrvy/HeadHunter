@@ -46,22 +46,28 @@ const signupFormHandler = async (event) => {
   if(specialty == '')
     specialty = null;
 
-  //send an api POST request to users
-  const response = await fetch(`api/${userType}s/`,{
+ 
+
+  if( password.length < 10){
+    alert('password needs to be at least 10 characters long')
+  
+    // if sucessful redirect user to dashboard
+  }else{
+     //send an api POST request to users
+    const response = await fetch(`api/${userType}s/`,{
       method: 'POST',
       body: JSON.stringify({username, password, name, email, specialty}),
       headers: { 'Content-Type': 'application/json'},
-  });
-
-  // if sucessful redirect user to dashboard
-  if(response.ok){
-    if(userType == 'headhunter')
-      document.location.replace('/dashboard');
-    if(userType == 'candidate')
-      document.location.replace('/jobs');
-  } else {
-      alert(response.statusText);
-  }
+    });
+    if(response.ok){
+      if(userType == 'headhunter')
+        document.location.replace('/dashboard');
+      if(userType == 'candidate')
+        document.location.replace('/jobs');
+    } else {
+        alert(response.statusText);
+    }
+  } 
 
 };
 
@@ -74,3 +80,6 @@ document
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginHandler);
+
+
+  
