@@ -2,7 +2,7 @@
 <!--Resume form -->
     <div class="resume">
         <h2>Create Your Resume</h2> 
-        <form action="/api/resumes/" method="post"> <!-- action will need the url for backend -->
+        <form id="resume"> <!-- action will need the url for backend -->
 <!-- Name -->        
             <label for="fullNmae">Full Name: </label><br>
             <input type="text" id="fullName" name="name" required><br><br>
@@ -32,3 +32,4 @@
             <!--<button type="submit">Edit Resume</button>-->
         </form> 
     </div>
+    <script src="/js/resume.js"></script>
