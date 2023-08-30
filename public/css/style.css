@@ -59,6 +59,14 @@ body {
     margin: 0 50px;
     font-size: 2em;
 }
+/*remove link underline and make it change color when hovered*/
+a{
+    color: var(--backgroundColor2);
+    text-decoration: none;
+}
+a:hover{
+    color: var(--buttonColor);
+}
 
 .span-1 {
     font-size: 3em;

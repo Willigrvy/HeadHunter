@@ -2,12 +2,12 @@
     <!-- link the title to job page-->
     <a href="/jobs/{{id}}" class="job-title">{{title}}</a>
     <p class="company">{{company_name}}</p>
-    <p class="date">{{format_date createdAt}}</p>
-    <hr class="custom-hr">
+    <p class="date">Posted on {{format_date createdAt}}</p>
     {{!-- can only show canidate list if user is headhunter --}}
     {{#if (isEqual user_type 'headhunter')}}
         <a class="candidate-list" href="/dashboard/candidate-list/{{id}}">candidate-list</a>
     {{/if}}
+    <hr class="custom-hr">
 </div>
 
 
