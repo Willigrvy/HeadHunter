@@ -45,7 +45,7 @@ body {
 }
 
 .header-title {
-    margin-right: 75px;
+    margin-right: 50px;
 }
 
 .nav-links {
@@ -56,7 +56,7 @@ body {
 }
 
 .nav-links a {
-    margin: 0 100px;
+    margin: 0 50px;
     font-size: 2em;
 }
 
@@ -81,7 +81,7 @@ body {
     flex: 1;
 }
 
-.hero h2, p {
+.hero h2, .hero p {
     font-size: 2em;
 }
 
@@ -103,18 +103,22 @@ body {
     flex-wrap: wrap;
 }
 
-.job {
-    font-size: 1.5em;
+.container-job {
+    font-size: 2em;
 }
 
-.name {
-    font-size: 1.5em;
+.container-name {
+    font-size: 1.7em;
     color: var(--buttonColor);
 }
 
+.container-email {
+    font-size: 1.3em;
+}
+
 .profile-image{
-    max-width: 200px;
-    max-height: 300px;
+    max-width: 250px;
+    max-height: 350px;
 }
 
 /* Sign-up and Login Sections */
@@ -220,7 +224,7 @@ body {
     margin: 10px 0;
 }
 
-.candidate-list {
+.candidate-list, .upload {
     font-size: 1.5em;
     color: maroon;
 }
@@ -265,22 +269,142 @@ footer {
     height: 60px;
 }
 
-/* Media Query for Responsive Behavior max-width 1200px */
-@media (max-width: 1200px) {
-
+/* HOMEPAGE Media Query for Responsive Behavior max-width 857px */
+@media (max-width: 857px) {
+    .nav-links a {
+        margin: 0 50px;
+        font-size: 1.5em;
+    }
 }
 
-/* Media Query for Responsive Behavior max-width 1024px */
-@media (max-width: 1024px) {
-
+/* HOMEPAGE Media Query for Responsive Behavior max-width 757px */
+@media (max-width: 757px) {
+    .nav-links a {
+        margin: 0 50px;
+        font-size: 1.3em;
+    }
 }
 
-/* Media Query for Responsive Behavior max-width 768px */
-@media (max-width: 768px) {
+/* HOMEPAGE Media Query for Responsive Behavior max-width 737px */
+@media (max-width: 737px) {
+    .span-1 {
+        font-size: 2.8em;
+    }
 
+    .span-2 {
+        font-size: 1.8em;
+    }
 }
 
-/* Media Query for Responsive Behavior max-width 480px */
-@media (max-width: 480px) {
-
+/* HOMEPAGE Media Query for Responsive Behavior max-width 716px */
+@media (max-width: 716px) {
+    .nav-links a {
+            margin: 0 45px;
+            font-size: 1.3em;
+        }
 }
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 701px */
+@media (max-width: 701px) {
+    .span-1 {
+        font-size: 2.5em;
+    }
+    
+    .span-2 {
+        font-size: 1.5em;
+    }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 676px */
+@media (max-width: 676px) {
+    .nav-links a {
+            margin: 0 35px;
+            font-size: 1.3em;
+        }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 647px */
+@media (max-width: 647px) {
+    .span-1 {
+            font-size: 2.3em;
+    }
+    
+    .span-2 {
+        font-size: 1.3em;
+    }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 611px */
+@media (max-width: 611px) {
+    .span-1 {
+        font-size: 2em;
+    }
+
+    .span-2 {
+        font-size: 1em;
+    }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 596px */
+@media (max-width: 596px) {
+    .nav-links a {
+        margin: 0 30px;
+        font-size: 1.3em;
+    }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 557px */
+@media (max-width: 557px) {
+    .span-1 {
+        font-size: 1.8em;
+    }
+
+    .span-2 {
+        font-size: 0.8em;
+    }
+
+    .nav-links a {
+        margin: 0 25px;
+        font-size: 1.3em;
+    }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 521px */
+@media (max-width: 521px) {
+    .header-logo {
+        margin-right: 20px;
+    }
+    .nav-links a {
+        margin: 0 20px;
+        font-size: 1.3em;
+    }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 511px */
+@media (max-width: 511px) {
+    .header-logo {
+        margin-right: 10px;
+    }
+
+    .hero h2, .hero p {
+        font-size: 2em;
+    }
+}
+
+/* HOMEPAGE Media Query for Responsive Behavior max-width 501px */
+@media (max-width: 501px) {
+    .span-1 {
+        font-size: 1.6em;
+    }
+    
+    .span-2 {
+        font-size: 0.6em;
+    }
+
+    .nav-links a {
+        margin: 0 15px;
+        font-size: 1.3em;
+    }
+}
+
+/* Media Queires stops at 466px */

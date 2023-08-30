@@ -3,7 +3,7 @@
      <!--if user_type == 'headhunter' and job.heahunter_id == logged_user-->
           {{#if (isEqual user_type 'headhunter')}} 
           <!--have a link to caniddate list-->
-               <a href="/dashboard/candidate-list/{{job.id}}">candidate list</a>
+               <a class="candidate-list" href="/dashboard/candidate-list/{{job.id}}">candidate list</a>
           {{/if}}
 <div class="full-job-block">
      <a class="full-job-block-job">{{job.title}}</a>

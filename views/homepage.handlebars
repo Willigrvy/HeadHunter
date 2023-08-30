@@ -1,7 +1,7 @@
 <!-- Hero Section --> 
         <div class="container-hero-awards">      
             <div class="hero">
-                <h2>Recruiters you can trust</h2> 
+                <h2>Recruiters you can trust</h2><br>
                 <p>Let us match you with the best professionals in your field.  We look at the big picture, consider every detail, and find the perfect candidates for every client.</p> 
             </div>
 <!-- Company Awards 5 Years in a Row -->        
@@ -24,14 +24,14 @@
                     {{#if headhunter.Image.name}}
                     <img src="/js/uploads/{{headhunter.Image.name}}"  class="profile-image" alt="profile pic for {{headhunter.id}}">
                     {{/if}}
-                    <p class="job">{{headhunter.specialty}}</p>
-                    <p class="name">{{headhunter.name}}</p>
-                    <p class="email">{{headhunter.email}}</p>
+                    <p class="container-job">{{headhunter.specialty}}</p>
+                    <p class="container-name">{{headhunter.name}}</p>
+                    <p class="container-email">{{headhunter.email}}</p>
                 </div>
             {{/each}}
         </div>
         {{#if (isEqual user_type 'headhunter')}}
-        <a href="/upload">Upload profile image</a>
+        <a class="upload" href="/upload">Upload profile image</a>
         {{/if}}
 
 
