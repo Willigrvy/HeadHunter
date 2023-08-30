@@ -258,7 +258,7 @@ a:hover{
 
 /* dashboard.handlebars and Job-page.handlebars APPLY*/
  .apply, .post-job {
-    padding-bottom: 650px;
+    padding-bottom: 20px;
     display: inline-block;
     font-size: 1.5em;
     color: maroon;
