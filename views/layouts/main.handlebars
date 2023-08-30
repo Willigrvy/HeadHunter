@@ -10,10 +10,8 @@
 <body>
 <!-- Header and Navigation -->
     <header class="header">
-        <div class="logo-title">
-            <img class="logo" src="/images/logo.png" width="150px" height="150px" alt="Company logo.">
-            <h1><span class="span-1">Web</span><span class="span-2">Hunters</span></h1>
-        </div>
+        <img class="header-logo" src="/images/logo.png" width="150px" height="150px" alt="Company logo.">
+        <h1 class="header-title"><span class="span-1">Web</span><span class="span-2">Hunters</span></h1>
         <nav class="nav-links">
             <a href="/">Home</a>
             {{#if logged_in}}
@@ -27,6 +25,7 @@
             <a href="/jobs">Jobs</a>
         </nav>
     </header>
+    </div>
     <main>
         {{{ body }}}
     </main>
@@ -38,3 +37,5 @@
 
 <script src="/js/logout.js"></script>
 </html>
+
+<!-- CSS IS FINISHED -->

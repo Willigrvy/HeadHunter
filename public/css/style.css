@@ -34,22 +34,30 @@ body {
 /* Header Section containing logo, title and navigation links */
 .header {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; 
     padding: 10px;
     background-color: var(--navBar);
 }
 
-.logo-title {
-    display: flex;
-    align-items: bottom;
+.header-logo {
+    margin-right: 30px;
+}
+
+.header-title {
+    margin-right: 75px;
 }
 
 .nav-links {
     display: flex;
-    justify-content: space-around;
-    padding-left: 20px;
-    flex-grow: 1;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: auto;
+}
+
+.nav-links a {
+    margin: 0 100px;
+    font-size: 2em;
 }
 
 .span-1 {
@@ -57,10 +65,6 @@ body {
 }
 
 .span-2 {
-    font-size: 2em;
-}
-
-.nav-links a {
     font-size: 2em;
 }
 
@@ -145,7 +149,7 @@ body {
     font-size: 3em;
 } 
 
-/* New Resume Section and New Job Listings */
+/* New Resume Section */
 .applying-for {
     font-size: 2em;
 }
@@ -200,7 +204,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 1.0);
 }
 
-/* Candidates Section */
+/* job-block.handlebars */
 .candidates, .job-block {
     padding: 10px;
 }
@@ -215,6 +219,38 @@ body {
     height: 2px;
     margin: 10px 0;
 }
+
+.candidate-list {
+    font-size: 1.5em;
+    color: maroon;
+}
+
+/* Job-page.handlebar Section */
+.full-job-block-job {
+    font-size: 3em;
+}
+
+.full-job-block-company {
+    font-size: 2em;
+}
+
+.full-job-block-description, .full-job-block-date {
+    font-size: 1.5em;
+}
+
+.alert {
+    font-size: 1.5em;
+    color: maroon;
+    padding-bottom: 500px; /* Sets the footer to the bottom of page */
+}
+
+/* dashboard.handlebars and Job-page.handlebars APPLY*/
+ .apply, .post-job {
+    padding-bottom: 650px;
+    display: inline-block;
+    font-size: 1.5em;
+    color: maroon;
+ }
 
 /* Footer Section containing group name */
 footer {

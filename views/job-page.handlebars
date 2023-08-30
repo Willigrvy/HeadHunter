@@ -6,17 +6,20 @@
                <a href="/dashboard/candidate-list/{{job.id}}">candidate list</a>
           {{/if}}
 <div class="full-job-block">
-     <a class="job">{{job.title}}</p>
-     <p class="company">{{job.company_name}}</p>
-     <p class="description">{{job.job_description}}</p>
-     <p class="date">posted on {{format_date job.createdAt}}</p>
+     <a class="full-job-block-job">{{job.title}}</a>
+     <h2 class="full-job-block-company">{{job.company_name}}</h2>
+     <p class="full-job-block-description">{{job.job_description}}</p>
+     <p class="full-job-block-date">posted on {{format_date job.createdAt}}</p><br>
 </div>
 <!-- Insert an if statement-->
      <!-- if user_type == 'candidate'-->
      
      {{#if (isEqual user_type 'candidate')}} 
           <!--apply that links to new resume-->
-          <a href="/jobs/resume/{{job.id}}">Apply here</a>
+          <a class="apply" href="/jobs/resume/{{job.id}}">Apply here</a>
      {{else}}
-          <p>You must be logged in as a candidate to apply</p>
+          <p class="alert">You must be logged in as a candidate to apply</p>
      {{/if}}
+
+
+<!--CSS IS FINISHED-->

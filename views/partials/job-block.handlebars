@@ -6,6 +6,9 @@
     <hr class="custom-hr">
     {{!-- can only show canidate list if user is headhunter --}}
     {{#if (isEqual user_type 'headhunter')}}
-        <a href="/dashboard/candidate-list/{{id}}">candidate-list</a>
+        <a class="candidate-list" href="/dashboard/candidate-list/{{id}}">candidate-list</a>
     {{/if}}
 </div>
+
+
+<!-- CSS IS FINISHED -->
