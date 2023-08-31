@@ -62,7 +62,7 @@ Code related:
 * Sequelize
 
 ## Link to Deployed Site - Heroku
-https://warm-harbor-86414-ad2e9c539fba.herokuapp.com/
+https://polar-eyrie-61739-9351be926493.herokuapp.com/
 
 ## Link to Github Repository
 https://github.com/Willigrvy/HeadHunter
