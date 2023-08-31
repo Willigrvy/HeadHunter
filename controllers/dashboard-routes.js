@@ -58,10 +58,7 @@ router.get('/candidate-list/:job_id', withAuth, async (req, res) => {
 router.get('/candidate-page/:resume_id', withAuth, async (req, res) => {
     try {
         //get one candidate
-        const resumeData = await Resume.findOne({
-            where:{
-                id: req.params.resume_id
-            },
+        const resumeData = await Resume.findByPk(req.params.resume_id,{
             include: [
                 {
                   model: Candidate
