@@ -17,8 +17,7 @@ As Headhunters, We have seen that it is very difficult to sift through the many 
 ## Sources
 Non-code related:
 
-* Mad scientist image - https://pixabay.com
-* Clown, funny people, crazy man, dog images - https://unsplash.com
+* Stock images - https://unsplash.com
 * Funny names - https://ethanwiner.com/funnames.html 
 * logo and ward maker - https://www.picmonkey.com
 * color wheel - https://www.canva.com/colors/color-wheel/
